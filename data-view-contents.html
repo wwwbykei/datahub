@@ -1,0 +1,221 @@
+
+<script src="js/tab.js"></script>
+<script src="js/tooltipster.bundle.min.js"></script>
+<script>
+$( document ).ready( function(){
+	$( ".tab-content #data" ).load( "data-view-contents-data.html" );
+})
+</script>
+
+<div class="contents-header">
+	<h1 class="contents-title"></h1>
+	<ul class="nav-tab-border">
+		<li class="active"><a data-toggle="tab" data-tooltip-content="#tooltip-guide-data" href="#data" class="btn tooltip-arrowless">데이터</a></li>
+		<li><a data-toggle="tab" data-tooltip-content="#tooltip-guide-infographic" href="#infographic" class="btn tooltip-arrowless">인포그래픽</a></li>
+		<li><a data-toggle="tab" data-tooltip-content="#tooltip-guide-admin" href="#administrator" class="btn tooltip-arrowless">관리자</a></li>
+	</ul>
+</div>
+<div class="tab-content">
+	<div id="data" class="tab-pane tab-data active">
+		<!--여기에 html 불러옴-->
+	</div><!--//tab-pane-->
+	<div id="infographic" class="tab-infographic tab-pane">
+		<div class="view-board">
+			<div class="board-header">
+				<h3><span class="label fill-bluedark">인증</span>버스 정류소 기본 정보</h3>
+				<div>
+					<span class="label outline-skyblue">API</span>
+					<span class="label outline-blue">FILE</span>
+					<span class="label outline-gray">LINK</span>
+					<ul>
+						<li>조회 2,123</li>
+						<li>즐겨찾기 123</li>
+					</ul>
+				</div>
+			</div>
+		</div><!--//view-board-->
+		<div class="section list-board">
+			<h5>일반분석</h5>
+			<ul class="list-card">
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html"><!--'마이페이지 > 데이터 관리'에서는 링크 변경 : mypage-data-view-general.html-->
+						<i class="ico-chart-bar"></i>
+						<h6>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html"><!--'마이페이지 > 데이터 관리'에서는 링크 변경 : mypage-data-view-general.html-->
+						<i class="ico-chart-line-multi"></i>
+						<h6>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html"><!--'마이페이지 > 데이터 관리'에서는 링크 변경 : mypage-data-view-general.html-->
+						<i class="ico-chart-line"></i>
+						<h6>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html"><!--'마이페이지 > 데이터 관리'에서는 링크 변경 : mypage-data-view-general.html-->
+						<i class="ico-chart-map"></i>
+						<h6>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div><!--//list-board-->
+		<div class="section list-board">
+			<h5>멀티미디어</h5>
+			<ul class="list-card">
+				<li class="card-video box-shadow-material">
+					<a href="infographic-multimedia-view.html"><!--'마이페이지 > 데이터 관리'에서는 링크 변경 : mypage-data-view-multimedia.html-->
+						<div class="card-image" style="background-image:url(images/sample-image.jpg)">
+							<i class="ico-play"></i>
+						</div>
+						<h6>제주무장애여행 - 사려니숲길-2(붉은오름방향)</h6>
+						<p>2020.07.08</p>
+					</a>
+				</li>
+				<li class="card-video box-shadow-material">
+					<a href="infographic-multimedia-view.html"><!--'마이페이지 > 데이터 관리'에서는 링크 변경 : mypage-data-view-multimedia.html-->
+						<div class="card-image" style="background-image:url(images/sample-image.jpg)">
+							<i class="ico-play"></i>
+						</div>
+						<h6>제주무장애여행 - 사려니숲길-2(붉은오름방향)</h6>
+						<p>2020.07.08</p>
+					</a>
+				</li>
+			</ul>
+		</div><!--//list-board-->
+	</div><!--//tab-pane-->
+	<div id="administrator" class="tab-pane list-person">
+		<div class="view-board">
+			<div class="board-header">
+				<h3><span class="label fill-bluedark">인증</span>버스 정류소 기본 정보</h3>
+				<div>
+					<span class="label outline-skyblue">API</span>
+					<span class="label outline-blue">FILE</span>
+					<span class="label outline-gray">LINK</span>
+					<ul>
+						<li>조회 2,123</li>
+						<li>즐겨찾기 123</li>
+					</ul>
+				</div>
+			</div>
+		</div><!--//view-board-->
+		<ul class="list-card">
+			<li class="card-person">
+				<button type="button" class="btn btn-icon ico-close">삭제</button><!--마이페이지 > 데이터 관리에서만 노출-->
+				<div class="person-image" style="background-image:url(images/sample-member.jpg)"></div>
+				<h6>abcdeabcdeabcdeabcdeabcde</h6>
+				<span class="label outline-gray radius">Owner</span>
+				<span class="label fill-bluedark">Member</span>
+			</li>
+			<li class="card-person">
+				<button type="button" class="btn btn-icon ico-close">삭제</button><!--마이페이지 > 데이터 관리에서만 노출-->
+				<div class="person-image" style="background-image:url(images/sample-member.jpg)"></div>
+				<h6>aksjl</h6>
+				<span class="label fill-bluedark">Owner</span>
+				<span class="label outline-gray radius">Member</span>
+			</li>
+			<li class="card-person">
+				<button type="button" class="btn btn-icon ico-close">삭제</button><!--마이페이지 > 데이터 관리에서만 노출-->
+				<div class="person-image"></div>
+				<h6>브란덴부르크</h6>
+				<span class="label outline-gray radius">Owner</span>
+				<span class="label fill-bluedark">Member</span>
+			</li>
+			<li class="card-person">
+				<button type="button" class="btn btn-icon ico-close">삭제</button><!--마이페이지 > 데이터 관리에서만 노출-->
+				<div class="person-image"></div>
+				<h6>연우아빠</h6>
+				<span class="label outline-gray radius">Owner</span>
+				<span class="label fill-bluedark">Member</span>
+			</li>
+			<li class="card-person">
+				<button type="button" class="btn btn-icon ico-close">삭제</button><!--마이페이지 > 데이터 관리에서만 노출-->
+				<div class="person-image"></div>
+				<h6>TP매니저</h6>
+				<span class="label outline-gray radius">Owner</span>
+				<span class="label fill-bluedark">Member</span>
+			</li>
+			<li class="card-person">
+				<button type="button" class="btn btn-icon ico-close">삭제</button><!--마이페이지 > 데이터 관리에서만 노출-->
+				<div class="person-image"></div>
+				<h6>abcde</h6>
+				<span class="label outline-gray radius">Owner</span>
+				<span class="label fill-bluedark">Member</span>
+			</li>
+		</ul>
+		
+		
+		<!--마이페이지 > 데이터 관리에서만 노출-->
+		<div class="contents-footer">
+			<a data-toggle="modal" data-target="#modal-member" class="btn btn-fill-bluedark fr">관리자 추가</a>
+		</div>
+		
+		
+	</div><!--//tab-pane-->
+</div><!--//tab-content-->
+
+<!--Tooltip-->
+<div class="tooltip_templates">
+    <div id="tooltip-guide-data">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-guide-infographic">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-guide-admin">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<!--//Tooltip-->
+
+<!--Modal-->
+<div class="modal fade" id="modal-member" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+            		<h3>관리자 추가</h3>
+            	</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<form>
+            		<div class="i-vertical w-full">
+						<label for="member-add">추가할 관리자</label>
+						<input type="text" id="member-add" placeholder="이메일 or 닉네임 입력" class="i-icon-right ico-search"><!--2020.10.20 placeholder / class 추가-->
+					</div>
+            	</form>
+            </div>
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-outline">취소</button>
+            	<button type="submit" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div><!--//modal-->

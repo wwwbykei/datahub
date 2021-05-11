@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="robots" content="ALL">
+<meta name="googlebot" content="ALL">
+<meta name="description" content="제주의 모든 데이터를 바로 찾아 이용할 수 있는 제주데이터허브">
+<meta name="keywords" content="제주데이터허브">
+<meta name="apple-mobile-web-app-title" content="제주데이터허브">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#224da0">
+<meta name="apple-mobile-web-app-title" content="제주데이터허브">
+<meta name="application-name" content="제주데이터허브">
+<meta name="msapplication-TileColor" content="#224da0">
+<meta name="theme-color" content="#ffffff">
+<title>제주데이터허브</title>
+<link rel="stylesheet" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/IE9.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/style.js"></script>
+<script>
+$( document ).ready( function(){
+	$( ".carousel" ).slick({
+		arrows: true,
+		infinite: false,
+		slidesToShow: 6,
+		slidesToScroll: 6,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 5
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 640,
+				settings: {
+					arrows: false,
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			}
+		]
+	});
+});
+</script>
+</head>
+
+<body class="page-home">
+<a href="#container">콘텐츠 바로가기</a>
+<div id="top"></div>
+
+<header class="global-header"></header>
+
+<div id="container">
+	<div class="main-image">
+		<img src="images/img-symbol.png" alt="">
+		<div>
+			<img src="images/logo-text.png" alt="">
+			<p>제주의 정보를 제주데이터허브에서 확인하세요.<br>다양한 주제의 키워드로 쉽게 데이터를 검색하고 활용할 수 있습니다.</p>
+			<form>
+			
+				<!--키워드 입력 후 엔터치면 검색되는게 아니고, 입력칸에 키워드가 쌓이게 처리-->
+				<input type="text" placeholder="키워드를 입력하세요." title="키워드 입력">
+				
+				<!--입력한 키워드는 아래 스타일로 추가되도록 처리해주세요-->
+				<div>
+					<button type="button" class="btn btn-outline btn-icon-right">제주</button>
+					<button type="button" class="btn btn-outline btn-icon-right">관광</button>
+					<button type="button" class="btn btn-outline btn-icon-right">성산일출봉</button>
+				</div>
+				
+				<!--검색 버튼을 눌러야 검색 페이지로 넘어감-->
+				<button type="submit" class="btn btn-fill-bluedark">검색</button>
+			</form>
+			<span>간단한 옵션 선택으로 자동 분석 리포트를 확인해보세요.</span>
+			<a data-toggle="modal" data-target="#modal-search" class="btn btn-fill-bluedark">AI 리포트 분석</a>
+		</div>
+	</div><!--//section-->
+	<div class="section list-category">
+		<ul>
+			<li class="category-tour box-shadow-material">
+				<a href="">
+					<div><i class="ico-tour"></i></div>
+					<h5>관광,여행</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
+			<li class="category-education box-shadow-material">
+				<a href="">
+					<div><i class="ico-education"></i></div>
+					<h5>교육,행정</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
+			<li class="category-traffic box-shadow-material">
+				<a href="">
+					<div><i class="ico-traffic"></i></div>
+					<h5>교통,안전</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
+			<li class="category-population box-shadow-material">
+				<a href="">
+					<div><i class="ico-population"></i></div>
+					<h5>인구, 생활</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
+			<li class="category-farm box-shadow-material">
+				<a href="">
+					<div><i class="ico-farm"></i></div>
+					<h5>농축수산</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
+			<!--<li class="category-health box-shadow-material">
+				<a href="">
+					<div><i class="ico-health"></i></div>
+					<h5>보건,복지</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
+			<li class="category-economy box-shadow-material">
+				<a href="">
+					<div><i class="ico-economy"></i></div>
+					<h5>소비, 지출</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
+			<li class="category-environment box-shadow-material">
+				<a href="">
+					<div><i class="ico-environment"></i></div>
+					<h5>환경, 재난</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>-->
+		</ul>
+	</div><!--//section-->
+	<div class="section list-data">
+		<div class="section-row">
+			<div class="row-half">
+				<h5>인기 데이터</h5>
+				<ul class="list-card">
+					<li class="card-text-number box-shadow-material">
+						<a href="infographic-general-view.html">
+							<i class="ico-number bg-bluedark">1</i>
+							<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+							<p>
+								<span>2020.07.08</span>
+								<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+							</p>
+						</a>
+					</li>
+					<li class="card-text-number box-shadow-material">
+						<a href="infographic-general-view.html">
+							<i class="ico-number bg-blue">2</i>
+							<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+							<p>
+								<span>2020.07.08</span>
+								<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+							</p>
+						</a>
+					</li>
+					<li class="card-text-number box-shadow-material">
+						<a href="infographic-general-view.html">
+							<i class="ico-number bg-skyblue">3</i>
+							<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+							<p>
+								<span>2020.07.08</span>
+								<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+							</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="row-half">
+				<h5>최신 데이터</h5>
+				<ul class="list-card">
+					<li class="card-text-icon box-shadow-material">
+						<a href="infographic-general-view.html">
+							
+							
+							<!--카테고리별 아이콘 class
+							- 관광,여행 : ico-tour
+							- 교육,행정 : ico-education
+							- 교통,안전 : ico-traffic
+							- 인구, 생활 : ico-population
+							- 농축수산 : ico-farm
+							- 보건,복지 : ico-health
+							- 소비, 지출 : ico-economy
+							- 환경, 재난 : ico-environment
+							-->
+							
+							
+							<i class="ico-tour bg-skyblue-light"></i>
+							<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+							<p>
+								<span>2020.07.08</span>
+								<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+							</p>
+						</a>
+					</li>
+					<li class="card-text-icon box-shadow-material">
+						<a href="infographic-general-view.html">
+							<i class="ico-population bg-green-light"></i>
+							<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+							<p>
+								<span>2020.07.08</span>
+								<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+							</p>
+						</a>
+					</li>
+					<li class="card-text-icon box-shadow-material">
+						<a href="infographic-general-view.html">
+							<i class="ico-economy bg-gray-blue"></i>
+							<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+							<p>
+								<span>2020.07.08</span>
+								<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+							</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div><!--//section-->
+	<div class="section list-general">
+		<div class="section-row">
+			<h5>일반 분석</h5>
+			<a href="infographic-general-list.html">더보기</a>
+			<ul class="list-card">
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html">
+						<i class="ico-chart-bar"></i>
+						<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html">
+						<i class="ico-chart-line-multi"></i>
+						<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html">
+						<i class="ico-chart-line"></i>
+						<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html">
+						<i class="ico-chart-map"></i>
+						<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html">
+						<i class="ico-chart-pie"></i>
+						<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+				<li class="card-text-chart box-shadow-material">
+					<a href="infographic-general-view.html">
+						<i class="ico-chart-tagcloud"></i>
+						<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보</h6>
+						<p>
+							<span>2020.07.08</span>
+							<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div><!--//section-->
+	<div class="section list-multimedia">
+		<div class="section-row">
+			<h5>멀티미디어</h5>
+			<a href="infographic-multimedia-list.html">더보기</a>
+			<ul class="list-card">
+				<li class="card-video box-shadow-material">
+					<a href="infographic-multimedia-view.html">
+						<div class="card-image" style="background-image:url(images/sample-image.jpg)">
+							<i class="ico-play"></i>
+						</div>
+						<h6>제주무장애여행 - 사려니숲길-2(붉은오름방향)</h6>
+						<p>2020.07.08</p>
+					</a>
+				</li>
+				<li class="card-video box-shadow-material">
+					<a href="infographic-multimedia-view.html">
+						<div class="card-image" style="background-image:url(images/sample-image.jpg)">
+							<i class="ico-play"></i>
+						</div>
+						<h6>제주무장애여행 - 사려니숲길-2(붉은오름방향)</h6>
+						<p>2020.07.08</p>
+					</a>
+				</li>
+				<li class="card-video box-shadow-material">
+					<a href="infographic-multimedia-view.html">
+						<div class="card-image" style="background-image:url(images/sample-image.jpg)">
+							<i class="ico-play"></i>
+						</div>
+						<h6>제주무장애여행 - 사려니숲길-2(붉은오름방향)</h6>
+						<p>2020.07.08</p>
+					</a>
+				</li>
+				<li class="card-video box-shadow-material">
+					<a href="infographic-multimedia-view.html">
+						<div class="card-image" style="background-image:url(images/sample-image.jpg)">
+							<i class="ico-play"></i>
+						</div>
+						<h6>제주무장애여행 - 사려니숲길-2(붉은오름방향)</h6>
+						<p>2020.07.08</p>
+					</a>
+				</li>
+				<li class="card-video box-shadow-material">
+					<a href="infographic-multimedia-view.html">
+						<div class="card-image" style="background-image:url(images/sample-image.jpg)">
+							<i class="ico-play"></i>
+						</div>
+						<h6>제주무장애여행 - 사려니숲길-2(붉은오름방향)</h6>
+						<p>2020.07.08</p>
+					</a>
+				</li>
+				<li class="card-video box-shadow-material">
+					<a href="infographic-multimedia-view.html">
+						<div class="card-image" style="background-image:url(images/sample-image.jpg)">
+							<i class="ico-play"></i>
+						</div>
+						<h6>제주무장애여행 - 사려니숲길-2(붉은오름방향)</h6>
+						<p>2020.07.08</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div><!--//section-->
+	<div class="section notice-report">
+		<div class="section-row">
+			<div class="row-half">
+				<h5>공지사항</h5>
+				<a href="community-notice-list.html">더보기</a>
+				<ul class="list-card">
+					<li class="card-text box-shadow-material">
+						<a href="community-notice-view.html">
+							<h6>[공지] 제주데이터허브 웹사이트 리뉴얼</h6>
+							<p>2020.07.08</p>
+						</a>
+					</li>
+					<li class="card-text box-shadow-material">
+						<a href="community-notice-view.html">
+							<h6>[공지] 제주데이터허브 웹사이트 리뉴얼</h6>
+							<p>2020.07.08</p>
+						</a>
+					</li>
+					<li class="card-text box-shadow-material">
+						<a href="community-notice-view.html">
+							<h6>[공지] 제주데이터허브 웹사이트 리뉴얼</h6>
+							<p>2020.07.08</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="row-half">
+				<h5>정기 리포트</h5>
+				<a href="report-serial-list.html">더보기</a>
+				<ul class="list-card">
+					<li class="card-text box-shadow-material">
+						<a href="report-serial-view.html">
+							<h6>제주데이터허브 2020년 1분기 와이파이 리포트</h6>
+							<p>2020.07.08</p>
+						</a>
+					</li>
+					<li class="card-text box-shadow-material">
+						<a href="report-serial-view.html">
+							<h6>제주데이터허브 2020년 1분기 와이파이 리포트</h6>
+							<p>2020.07.08</p>
+						</a>
+					</li>
+					<li class="card-text box-shadow-material">
+						<a href="report-serial-view.html">
+							<h6>제주데이터허브 2020년 1분기 와이파이 리포트</h6>
+							<p>2020.07.08</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div><!--//section-->
+	<div class="section list-chart">
+		<div class="section-row">
+			<div class="chart-gender row-half">
+				<h5>성별 이용자 통계</h5>
+				<div class="box-shadow-material">
+					<img src="images/img-male.png" alt="">
+					
+					<!--그래프 영역-->
+					<div style="background-image:url(images/sample-pie.jpg)">
+						<p style="bottom:0;left:-20px"><span>63%</span>남자</p><!--값은 span에 적으면 됩니다-->
+						<p style="top:0;right:-20px"><span>37%</span>여자</p><!--값은 span에 적으면 됩니다-->
+					</div>
+					
+					<img src="images/img-female.png" alt="">
+				</div>
+			</div>
+			<div class="chart-monthly row-half">
+				<h5>월별 이용자 통계</h5>
+				<div class="box-shadow-material">
+					
+					<!--그래프 영역-->
+					<div style="background-image:url(images/sample-chart.jpg)">
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div><!--//section-->
+	<div class="section list-banner">
+		<ul class="carousel section-row">
+			<li>
+				<a href="">
+					<img src="images/banner-logo-001.png" alt="제주테크노파크">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-002.png" alt="제주특별자치도">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-003.png" alt="제주테크노파크">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-004.png" alt="제주특별자치도">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-005.png" alt="제주테크노파크">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-006.png" alt="제주특별자치도">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-007.png" alt="제주테크노파크">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-008.png" alt="제주특별자치도">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-009.png" alt="제주테크노파크">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-010.png" alt="제주특별자치도">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/banner-logo-011.png" alt="제주테크노파크">
+				</a>
+			</li>
+		</ul>
+	</div><!--//section-->
+</div><!--//container-->
+
+<footer class="global-footer"></footer>
+
+
+<!--Modal-->
+<div class="modal fade" id="modal-search" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-report-search" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+            		<h3>AI 리포트 분석</h3>
+            	</div>
+            	<button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<form class="form">
+            		<div class="i-vertical">
+						<label>성별</label>
+						<div class="i-group">
+							<label class="radio-container" for="gender-all">전체
+								<input type="radio" id="gender-all" name="gender">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="male">남자
+								<input type="radio" id="male" name="gender">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="female">여자
+								<input type="radio" id="female" name="gender">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<div class="i-vertical">
+						<label>연령</label>
+						<div class="i-group">
+							<label class="radio-container" for="age-all">전체
+								<input type="radio" id="age-all" name="age">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="age-10">10대
+								<input type="radio" id="age-10" name="age">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="age-20">20대
+								<input type="radio" id="age-20" name="age">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="age-30">30대
+								<input type="radio" id="age-30" name="age">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="age-40">40대
+								<input type="radio" id="age-40" name="age">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="age-50">50대
+								<input type="radio" id="age-50" name="age">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="age-60">60대
+								<input type="radio" id="age-60" name="age">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="age-70">70대
+								<input type="radio" id="age-70" name="age">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<div class="i-vertical">
+						<label>지역</label>
+						<div class="i-group">
+							<label class="radio-container" for="area-all">전체
+								<input type="radio" id="area-all" name="area">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="area-jeju">제제주특별자치도
+								<input type="radio" id="area-jeju" name="area">
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container" for="area-etc">그 외 지역
+								<input type="radio" id="area-etc" name="area">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<div class="section-result">
+						<span>선택 :</span>
+						<ul>
+							<li>남여</li>
+							<li>전연령</li>
+							<li>제주특별자치도</li>
+						</ul>
+					</div>
+            	</form>
+            </div>
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-outline">취소</button>
+            	<button type="button" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div><!--//modal-->
+
+</body>
+</html>

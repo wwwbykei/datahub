@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="robots" content="ALL">
+<meta name="googlebot" content="ALL">
+<meta name="description" content="제주의 모든 데이터를 바로 찾아 이용할 수 있는 제주데이터허브">
+<meta name="keywords" content="제주데이터허브">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#224da0">
+<meta name="apple-mobile-web-app-title" content="제주데이터허브">
+<meta name="application-name" content="제주데이터허브">
+<meta name="msapplication-TileColor" content="#224da0">
+<meta name="theme-color" content="#ffffff">
+<title>예약 관리 &#58; 제주데이터허브</title>
+<link rel="stylesheet" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/IE9.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/style.js"></script>
+<!--datepicker-->
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/moment.min.js"></script>
+<!--//datepicker-->
+<script>
+$( document ).ready( function(){
+	datepicker();
+});
+</script>
+</head>
+
+<body class="">
+<a href="#container">콘텐츠 바로가기</a>
+<div id="top"></div>
+
+<header class="global-header"></header>
+
+<div id="container">
+	<div class="page-title">
+		<span class="content-wrap">마이페이지</span>
+		<h1 class="content-wrap">예약 관리</h1>
+	</div>
+	<div class="content-wrap">
+		<ul class="sidebar menu">
+			<li>
+				<span>마이데이터</span>
+				<ul>
+					<li><a href="mypage-data-list.html">데이터 관리</a></li>
+					<li><a href="mypage-project-list.html">프로젝트 관리</a></li>
+					<li><a href="mypage-favorite-list.html">즐겨찾기 관리</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>센터이용</span>
+				<ul>
+					<li class="active"><a href="mypage-reservation.html">예약 관리</a></li>
+					<li><a href="mypage-export-list.html">데이터 반출내역</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>계정</span>
+				<ul>
+					<li><a href="mypage-account.html">내 정보</a></li>
+				</ul>
+			</li>
+		</ul><!--//sidebar-->
+		<div class="contents">
+			<div class="contents-header">
+				<h1 class="contents-title">예약 관리</h1>
+			</div>
+			<div class="list-board">
+				<table class="table-responsive">
+					<thead>
+						<tr>
+							<th class="cell-number">번호</th>
+							<th class="cell-subject">구분</th>
+							<th>신청일</th>
+							<th>예약기간</th>
+							<th>상태</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="has-split">
+							<td class="cell-number">5,456</td>
+							<td class="cell-subject">Lab 1</td>
+							<td class="cell-linebreak"><label>신청일 : </label>2020.03.03</td>
+							<td class=""><label>예약기간 : </label>2020.03.03 - 2020.03.03</td>
+							<td class="cell-linebreak"><label>상태 : </label>승인</td>
+							<td class="cell-linebreak pb16 cell-button">
+								<a href="center-analysis.html" class="btn btn-h32 btn-outline">예약 변경</a>
+								<a data-toggle="modal" data-target="#modal-reservation-cancel" class="btn btn-h32 btn-outline-red">예약 취소</a>
+							</td>
+						</tr>
+						<tr class="has-split">
+							<td class="cell-number">5,456</td>
+							<td class="cell-subject">Lab 1</td>
+							<td class="cell-linebreak"><label>신청일 : </label>2020.03.03</td>
+							<td class=""><label>예약기간 : </label>2020.03.03 - 2020.03.03</td>
+							<td class="cell-linebreak"><label>상태 : </label>승인</td>
+							<td class="cell-linebreak pb16 cell-button">
+								<a data-toggle="modal" data-target="#modal-result-upload" class="btn btn-h32 btn-outline">결과물 등록</a>
+								<a data-toggle="modal" data-target="#modal-reservation-extend" class="btn btn-h32 btn-outline-bluedark">기간 연장</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--//list-board-->
+			<div class="pagination">
+				<a href="" class="prev">이전</a>
+				<ul>
+					<li class="active"><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li><a href="">6</a></li>
+					<li><a href="">7</a></li>
+					<li><a href="">8</a></li>
+					<li><a href="">9</a></li>
+					<li><a href="">10</a></li>
+				</ul>
+				<a href="" class="next">다음</a>
+			</div><!--//pagination-->
+		</div><!--//contents-->
+	</div><!--//content-wrap-->
+</div><!--//container-->
+
+<footer class="global-footer"></footer>
+
+<!--Modal > 기간 연장-->
+<div class="modal fade" id="modal-reservation-extend" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-reservation-extend" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+	            <div class="modal-title">
+	                <h3>기간 연장</h3>
+	            </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+				<form class="form">
+					<div class="i-vertical w-full">
+						<label for="date-start">시작일</label>
+				        <input type="text" id="date-start" class="i-date">
+					</div>
+					<div class="i-vertical w-full">
+						<label for="date-end">종료일</label>
+						<input type="text" id="date-end" class="i-date">
+					</div>
+					<div class="i-vertical w-full">
+						<label for="extend-reason">연장 사유</label>
+						<textarea id="extend-reason"></textarea>
+					</div>
+					<label class="checkbox-container" for="info-agree">기존과 연구목적이 동일하며 개인정보 이용에 동의합니다.
+						<input type="checkbox" id="info-agree">
+						<span class="checkmark"></span>
+					</label>
+					<button type="submit" data-dismiss="modal" data-toggle="modal" data-target="#modal-extend-result" class="btn btn-fill-bluedark w-full">연장 신청</button>
+				</form>
+				<div class="calendar-wrap">
+					<h3>예약 현황</h3>
+					<ul>
+						<li class="bu-dot-green">예약 가능</li>
+						<li>예약 불가</li>
+						<li class="bu-dot-red">임시 휴관</li>
+					</ul>
+					<div class="calendar">
+						<div class="calendar-header">
+		                    <h3>2019.12</h3>
+		                    <div class="btn-group">
+		                    	<button type="button" class="btn prev">이전달</button>
+		                    	<button type="button" class="btn next">다음달</button>
+		                    </div>
+		                </div>
+		                <table>
+		                    <thead>
+		                        <tr>
+		                            <th scope="col">일</th>
+		                            <th scope="col">월</th>
+		                            <th scope="col">화</th>
+		                            <th scope="col">수</th>
+		                            <th scope="col">목</th>
+		                            <th scope="col">금</th>
+		                            <th scope="col">토</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                        <tr>
+		                        	<!--달력 설명
+		                        		- 오늘 : td에 'today' 클래스 추가
+		                        		- 오늘 이전 : td에 'past' 클래스 추가
+		                        		- 주중인데 빨간날 : td에 'holiday' 클래스 추가
+		                        		- 이용 가능한 분석실 : li에 'bu-dot-green' 클래스 추가
+		                        	-->
+		                            <td><span>1</span></td>
+		                            <td class="past"><span>2</span>
+		                            	<ul class="bu-dot">
+		                            		<li>Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td class="past"><span>3</span>
+		                            	<ul class="bu-dot">
+		                            		<li>Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td class="past"><span>4</span>
+		                            	<ul class="bu-dot">
+		                            		<li>Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td class="past"><span>5</span>
+		                            	<ul class="bu-dot">
+		                            		<li>Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td class="past"><span>6</span>
+		                            	<ul class="bu-dot">
+		                            		<li>Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>7</span></td>
+		                        </tr>
+		                        <tr>
+		                            <td><span>8</span></td>
+		                            <td><span>9</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>10</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>11</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>12</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td class="today"><span>13</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>14</span></td>
+		                        </tr>
+		                        <tr>
+		                            <td><span>15</span></td>
+		                            <td><span>16</span>
+		                            	<ul class="bu-dot">
+		                            		<li>Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>17</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>18</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>19</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>20</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>21</span></td>
+		                        </tr>
+		                        <tr>
+		                            <td><span>22</span></td>
+		                            <td><span>23</span>
+		                            	<ul class="bu-dot">
+		                            		<li>Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>24</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>25</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>26</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>27</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>28</span></td>
+		                        </tr>
+		                        <tr>
+		                            <td><span>29</span></td>
+		                            <td><span>30</span>
+		                            	<ul class="bu-dot">
+		                            		<li>Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>31</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td class="holiday"><span>Jan 1</span></td>
+		                            <td><span>2</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>3</span>
+		                            	<ul class="bu-dot">
+		                            		<li class="bu-dot-green">Lab 1</li>
+		                            	</ul>
+		                            </td>
+		                            <td><span>4</span></td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+					</div>
+				</div><!--//calendar-wrap-->
+            </div>
+        </div><!--//modal-content-->
+    </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!--Modal > 기간 연장 결과-->
+<div class="modal fade" id="modal-extend-result" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-notitle modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+				<h3>연장신청이 완료 되었습니다.</h3>
+            </div>
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div><!--//modal-content-->
+    </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!--Modal > 예약 취소-->
+<div class="modal fade" id="modal-reservation-cancel" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+	                <h3>예약 취소</h3>
+	            </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+				<h3>강의실 예약을 취소하시겠습니까?</h3>
+            </div>
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-outline">닫기</button>
+            	<button type="submit" data-dismiss="modal" data-toggle="modal" data-target="#modal-cancel-result" class="btn btn-fill-bluedark">예약 취소</button>
+            </div>
+        </div><!--//modal-content-->
+    </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!--Modal > 예약 취소 결과-->
+<div class="modal fade" id="modal-cancel-result" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-notitle modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+				<h3>강의실 예약이 취소 되었습니다.</h3>
+            </div>
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div><!--//modal-content-->
+    </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!--Modal > 결과물 등록/수정-->
+<div class="modal fade" id="modal-result-upload" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+	                <h3>산출물 등록</h3>
+	            </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <form class="modal-body">
+				<input type="file" title="산출물 파일 업로드" class="w-full">
+            </form>
+            <div class="modal-footer">
+            	<button type="submit" data-dismiss="modal" class="btn btn-fill-bluedark">등록</button>
+            </div>
+        </div><!--//modal-content-->
+    </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+
+// Header
+.global-header{.fl;.w-full;.bb;.bgw;.z(@z-navbar);
+	@media @mobile{.fixed;top:0;left:0;.w-full;.h(@gnb-height-mobile)}
+	//@media @moretablet{.h(@gnb-height-desktop)}
+	> .navbar-brand{
+		@media @mobile{.horiz-center;.mt(14px)}
+		@media @moretablet{.hidden}
+	}
+}
+.nav-btn{
+	@media @mobile{.block;.fixed;top:18px;left:20px;width:24px;height:24px;.bgimg('ico-menu.png');.bgs;.text-hidden;.z( @z-navbar + 10 )}
+	@media @moretablet{.hidden}
+}
+.nav-close{
+	@media @mobile{.btn;.block;.fixed;top:18px;left:20px;width:24px;height:24px;.bgimg('ico-close.png',50%,50%);.bgs;.text-hidden}
+	@media @moretablet{.hidden}
+}
+nav{.h(100%);
+	@media @mobile{.nav-fixed-left;overflow-y:auto;.fixed;top:0;bottom:0;.boxsize;width:100%;max-width:@gnb-width-mobile;height:100%;.p(60px 40px 40px);.bgw;.translate(0,0);.transition(0.15s ease);.z(@zindex-popover);
+		&.nav-fixed-left{left:-@gnb-width-mobile;
+			&.active{.translate(@gnb-width-mobile,0)}
+		}
+		&.nav-fixed-right{right:-@gnb-width-mobile;
+			&.active{.translate(-@gnb-width-mobile,0);.box-shadow(-15px,5px,15px,rgba(0,0,0,0.2))}
+		}
+	}
+	@media @moretablet{.content-wrap;.tc}
+	.navbar-brand{
+		@media @mobile{.hidden}
+		@media @tablet{.block;.mt(20px);}
+		@media @desktop{.block;.fl;.mtb(45px)}
+	}
+}
+.brand-image{.in-block;.w(180px);.h(32px);.text-hidden;.bgimg('logo-color.png',50%,50%);.bgs}
+.nav-gnb{.tl;
+	> li{
+		> a{.block;.ptb(8px);.prl(16px);.fs(16);.c(#666);.pointer;
+			@media @tablet{.fs(14)}
+		}
+	}
+	@media @mobile{
+		> li{.mtb(8px);.mrl(-16px);
+			&.active{
+				> a{.bold;.c(@blue-dark)}
+				div,ul{.block}
+			}
+			> a{}
+		}
+	}
+	@media @moretablet{.rel;
+		> li{.fl;.rel;.h(80px);
+    		&:hover{
+				> a{.c(@blue-dark)}
+				.nav-lnb{.block}
+			}
+			> a{.mt(20px)}
+    	}
+	}
+	@media @tablet{}
+	@media @desktop{.in-block;.mt(20px);
+    	
+	}
+}
+.nav-lnb{.hidden;.overh;
+	@media @mobile{.mrl(16px)}
+	@media @moretablet{.boxsize;.abs;top:100%;left:0;min-width:140px;.ptb(12px);.bt(@blue-dark,2px);.bgw;.box-shadow;.z(10)}
+	> li{.overh}
+	a{.block;.p(8px 16px);.c(#666);
+		&:hover{.c(@color-primary)}
+	}
+	h6{.fs(12);.c(#999);
+		@media @mobile{.in-block;.fl;.w(56px);.mt(11px)}
+		@media @moretablet{.m(8px 16px 4px)}
+	}
+	ul{
+		@media @mobile{.ml(32px);.fl}
+	}
+}
+.nav-account{
+	@media @mobile{.mt(16px);.ptb(16px);.bt}
+	@media @moretablet{.fr}
+	> li{
+		&:not(:last-child){.mr(8px)}
+		@media @moretablet{
+			&:hover{
+				> a{.b(@blue)}
+			}
+			> a{.btn-outline;.radius(4px)}
+		}
+	}
+	.nav-lnb{
+		> li{
+			&:not(:first-child){.mt(8px);.pt(8px);.bt}
+		}
+	}
+}
+.nav-hack{
+	@media @mobile{left:-@gnb-width-mobile;
+		&.active{left:0}
+	}
+}
+body{
+	&.active{.fixed;width:100%}
+	.bg-close,.bg-filter-close{.hidden;
+		&.active{.block;.fixed;top:0;left:0;right:0;bottom:0;.rgba(#000,0.65);.z(@zindex-popover - 10)}
+	}
+}
+
+// Footer
+.global-footer{.clear;.fl;.w-full;.mt(80px);.ptb(40px,48px);.bt;
+    > div{.overh;
+    	> *{
+    		&:not(:first-child){
+    			@media @mobile{.mt(32px)}
+    		}
+    	}
+    }
+    form{
+    	@media @moretablet{.fr;.mt(34px)}
+	    label{.block;.mb(16px);.c(#999)}
+    }
+    .form-table{
+    	@media (min-width:400px){.w(280px)}
+    }
+    .nav-footer,.nav-sns{
+    	@media @moretablet{.mt(32px)}
+    }
+    .nav-footer{
+    	@media @moretablet{.list-horiz}
+    	@media @desktop{.rel;.fl;.mr(40px);.pr(40px);
+    		&:after{.b-split(14px,right)}
+    	}
+    	li{
+    		&:not(:first-child){
+    			@media @mobile{.mt(16px)}
+    			@media @tablet{.ml(24px)}
+    			@media @desktop{.ml(40px)}
+    		}
+    	}
+    }
+    .nav-sns{.list-horiz;
+    	li{
+    		&:not(:first-child){
+    			@media @totablet{.ml(24px)}
+    			@media @desktop{.ml(40px)}
+    		}
+    		&:first-child{
+    			a{.bgimg('ico-facebook.png',50%,50%)}
+    		}
+    		&:nth-child(2){
+    			a{.bgimg('ico-twitter.png',50%,50%)}
+    		}
+    		&:last-child{
+    			a{.bgimg('ico-youtube.png',50%,50%)}
+    		}
+    		a{.block;.w(24px);.h(24px);.bgs;.text-hidden}
+    	}
+    }
+    .contacts,p{
+    	@media @moretablet{.mt(20px)}
+    }
+    .contacts{.bu-split;.c(#999)}
+    p{.c(#999)}
+}
+
+// Page Title
+.page-title{.overh;.w-full;.h(120px);.bg(#E8EDF6);.bgs(cover);
+	@media @mobile{.bgimg('bg-header-mobile.jpg',50%,50%)}
+	@media @moretablet{.bgimg('bg-header-desktop.jpg',50%,50%)}
+	span,h1{.c(#000);
+		@media @mobile{.tc}
+	}
+	span{.block;.mtb(32px,4px);.opacity(.5)}
+	h1{.bold;.opacity(.8);
+		@media @mobile{.fs(20)}
+		&:not(:first-child){
+			@media @moretablet{.hidden}
+		}
+		&:first-child{
+			@media @mobile{.mt(44px)}
+		}
+	}
+	span,h1:first-child{
+		@media @moretablet{.mt(40px);.fs(28);.bold;.opacity(.8)}
+	}
+}
+
+.nav-step{.clear;.mtb(64px,32px);.tc;
+	ol{.dp-table;.mrl(auto);
+		li{.boxsize;.rel;.w(110px);.pt(32px);.fs(12);.c(#333);
+		    &:before{content:'';.abs;top:-4px;left:0;right:0;height:2px;.bg(#ddd);.z(1)}//가로선
+			span{content:'';.abs;top:-26px;left:50%;width:42px;height:42px;margin-left:-21px;.radius-oval;.b(#ddd,2px);.bgw;.lh(42px);.tc;.fs(14);.montserrat;.z(10)}//점
+			a,div{.block}//text
+			&.disabled{
+				a{cursor:default}
+			}
+			&.done{
+				span{.b(@color-primary,2px);.bg(@color-primary);.bgimg('ico-check-white.png',50%,50%);.bgs(24px);.text-hidden}
+			}
+			&.active{
+				span{.b(@color-primary,2px);.bold;.c(@color-primary)}
+				// a,div{
+				// 	&:after{content:'';.abs;top:0;left:50%;width:26px;height:26px;.ml(-13px);.radius-oval;.bg(@green);.z(5)}//큰 점
+				// }
+			}
+			&:first-child:before{left:50%}//처음, 마지막 가로선 반만 생성
+			&:last-child:before{right:50%}
+			// p:before{content:'';.abs;top:12px;left:50%;right:0;height:1px}
+			// &:last-child p:before{.bgnone !important}
+		}
+	}
+}
+.nav-step.step1 ul li:nth-child(1):before,
+.nav-step.step2 ul li:nth-child(-n+2):before,
+.nav-step.step3 ul li:nth-child(-n+3):before,
+.nav-step.step1-ing ul li:nth-child(1):before,
+.nav-step.step2-ing ul li:nth-child(-n+2):before,
+.nav-step.step3-ing ul li:nth-child(-n+3):before,
+.nav-step.step1 ul li:nth-child(1) span,
+.nav-step.step2 ul li:nth-child(-n+2) span,
+.nav-step.step3 ul li:nth-child(-n+3) span,
+.nav-step.step1-ing ul li:nth-child(1) span,
+.nav-step.step2-ing ul li:nth-child(-n+2) span,
+.nav-step.step3-ing ul li:nth-child(-n+3) span{.bg(@color-primary)}//활성 상태
+.nav-step.step2 ul li:nth-child(2) p:before,
+.nav-step.step3 ul li:nth-child(3) p:before{.bg(@gray-400)}
+
+.nav-filter-close{
+	@media @totablet{.btn;.block;.fixed;top:18px;right:20px;width:24px;height:24px;.bgimg('ico-close.png',50%,50%);.bgs;.text-hidden}
+	@media @desktop{.hidden}
+}
+@filter-width: 244px;
+.nav-filter{.h(100%);
+	@media @totablet{.nav-fixed-right;overflow-y:auto;.fixed;top:0;bottom:0;.boxsize;width:100%;max-width:@filter-width;height:100%;.bgw;.translate(0,0);.transition(0.15s ease);.z(@zindex-popover);
+		&.nav-fixed-right{right:-@filter-width;
+			&.active{.translate(-@filter-width,0);.box-shadow(-15px,5px,15px,rgba(0,0,0,0.2))}
+		}
+	}
+	.filter-header{.fixed;.w-full;.h(60px);.bb;
+		h3{.mt(20px);.ml(32px);.fs(16)}
+	}
+	.sidebar.filter{.block;.fn;.m(84px 32px 40px);}
+	@media @desktop{.hidden}
+}

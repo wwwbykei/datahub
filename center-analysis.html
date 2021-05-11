@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="robots" content="ALL">
+<meta name="googlebot" content="ALL">
+<meta name="description" content="제주의 모든 데이터를 바로 찾아 이용할 수 있는 제주데이터허브">
+<meta name="keywords" content="제주데이터허브">
+<meta name="viewport" content="width=1280">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#224da0">
+<meta name="apple-mobile-web-app-title" content="제주데이터허브">
+<meta name="application-name" content="제주데이터허브">
+<meta name="msapplication-TileColor" content="#224da0">
+<meta name="theme-color" content="#ffffff">
+<title>분석실예약 &#58; 제주데이터허브</title>
+<link rel="stylesheet" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/IE9.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/style.js"></script>
+<!--datepicker-->
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/moment.min.js"></script>
+<!--//datepicker-->
+<script>
+$( document ).ready( function(){
+	datepicker();
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		$('html, body').animate({scrollTop:0},0);
+        return false;
+	})
+});
+</script>
+</head>
+
+<body class="page-center-analysis">
+<a href="#container">콘텐츠 바로가기</a>
+<div id="top"></div>
+
+<header class="global-header"></header>
+
+<div id="container">
+	<div class="page-title">
+		<span class="content-wrap">빅데이터센터</span>
+		<h1 class="content-wrap">분석실예약</h1>
+	</div>
+	<div class="content-wrap">
+		<ul class="sidebar menu">
+            <li ><a href="center-guide.html">이용안내</a></li>
+            <li><a href="center-data.html">제공데이터</a></li>
+            <li><a href="center-datasearch.html">데이터검색</a></li>
+            <li class="active"><a href="center-analysis.html">분석실예약</a></li>
+            <li><a href="center-classroom.html">교육장예약</a></li>
+		</ul>
+		<div class="contents">
+			<div class="contents-header">
+				<h1 class="contents-title">분석실예약</h1>
+			</div>
+			<div class="tab-content">
+    			<div id="step1-date" class="tab-pane active">
+					<div class="form-filter">
+						<form>
+							<div class="filter-row">
+								<ul>
+									<li>
+										<label>Site</label>
+										<select title="Site 선택">
+											<option value="" selected disabled hidden>선택</option>
+											<option>Lab 1 &#47; 4인실</option>
+											<option>Lab 2 &#47; 4인실</option>
+											<option>Lab 3 &#47; 3인실</option>
+											<option>일반분석실 &#47; 10인실</option>
+										</select>
+									</li>
+									<li class="form-fromto">
+										<label>사용일</label>
+										<input type="text" id="date-start" class="i-date"><span>-</span><input type="text" id="date-end" class="i-date">
+									</li>
+									<li>
+										<label>사용인원</label>
+										<select title="사용인원 선택">
+											<option value="" selected disabled hidden>선택</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option></option>
+										</select>
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<label form="request">요청사항</label>
+										<input type="text" id="request" placeholder="예약 관련 혹은 기타 요청사항을 남겨주세요.">
+									</li>
+								</ul>
+							</div><!--//filter-row-->
+							<button type="submit" data-toggle="tab" href="#step2-plan" class="btn btn-fill-bluedark">예약</button>
+						</form>
+					</div><!--//form-filter-->
+					<div class="calendar-wrap">
+						<h3>예약 현황</h3>
+						<div class="btn-group">
+							<button type="button" class="btn btn-h32 btn-radius btn-fill-bluedark">전체</button>
+							<button type="button" class="btn btn-h32 btn-radius btn-outline">Lab 1</button>
+							<button type="button" class="btn btn-h32 btn-radius btn-outline">Lab 2</button>
+							<button type="button" class="btn btn-h32 btn-radius btn-outline">Lab 3</button>
+							<button type="button" class="btn btn-h32 btn-radius btn-outline">일반분석실</button>
+						</div>
+						<ul>
+							<li class="bu-dot-green">예약 가능</li>
+							<li>예약 불가</li>
+							<li class="bu-dot-red">임시 휴관</li>
+						</ul>
+						<div class="calendar">
+							<div class="calendar-header">
+			                    <h3>2019.12</h3>
+			                    <div class="btn-group">
+			                    	<button type="button" class="btn prev">이전달</button>
+			                    	<button type="button" class="btn next">다음달</button>
+			                    </div>
+			                </div>
+			                <table>
+			                    <thead>
+			                        <tr>
+			                            <th scope="col">일</th>
+			                            <th scope="col">월</th>
+			                            <th scope="col">화</th>
+			                            <th scope="col">수</th>
+			                            <th scope="col">목</th>
+			                            <th scope="col">금</th>
+			                            <th scope="col">토</th>
+			                        </tr>
+			                    </thead>
+			                    <tbody>
+			                        <tr>
+			                            <td><span>1</span></td>
+			                            <td class="past"><span>2</span>
+			                            	<ul class="bu-dot">
+			                            		<li>Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li>Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td class="past"><span>3</span>
+			                            	<ul class="bu-dot">
+			                            		<li>Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li>Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td class="past"><span>4</span>
+			                            	<ul class="bu-dot">
+			                            		<li>Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li>Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td class="past"><span>5</span>
+			                            	<ul class="bu-dot">
+			                            		<li>Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li>Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td class="past"><span>6</span>
+			                            	<ul class="bu-dot">
+			                            		<li>Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li>Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>7</span></td>
+			                        </tr>
+			                        <tr>
+			                            <td><span>8</span></td>
+			                            <td><span>9</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>10</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>11</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>12</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td class="today"><span>13</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>14</span></td>
+			                        </tr>
+			                        <tr>
+			                            <td><span>15</span></td>
+			                            <td><span>16</span>
+			                            	<ul class="bu-dot">
+			                            		<li>Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>17</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>18</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>19</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>20</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>21</span></td>
+			                        </tr>
+			                        <tr>
+			                            <td><span>22</span></td>
+			                            <td><span>23</span>
+			                            	<ul class="bu-dot">
+			                            		<li>Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>24</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>25</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>26</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>27</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>28</span></td>
+			                        </tr>
+			                        <tr>
+			                            <td><span>29</span></td>
+			                            <td><span>30</span>
+			                            	<ul class="bu-dot">
+			                            		<li>Lab 1</li>
+			                            		<li>Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>31</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td class="holiday"><span>Jan 1</span></td>
+			                            <td><span>2</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>3</span>
+			                            	<ul class="bu-dot">
+			                            		<li class="bu-dot-green">Lab 1</li>
+			                            		<li class="bu-dot-green">Lab 2</li>
+			                            		<li class="bu-dot-green">Lab 3</li>
+			                            		<li class="bu-dot-green">일반분석실</li>
+			                            	</ul>
+			                            </td>
+			                            <td><span>4</span></td>
+			                        </tr>
+			                    </tbody>
+			                </table>
+						</div>
+					</div><!--//calendar-wrap-->
+				</div><!--//tab-pane-->
+				<div id="step2-plan" class="tab-pane">
+					<form class="form form-plan">
+						<div class="i-vertical w-full">
+							<label>사용자 구분</label>
+							<div class="i-group">
+								<label class="radio-container" for="user-category-individual">개인
+									<input type="radio" id="user-category-individual" name="user-category">
+									<span class="checkmark"></span>
+								</label>
+								<label class="radio-container" for="user-category-company">기업
+									<input type="radio" id="user-category-company" name="user-category">
+									<span class="checkmark"></span>
+								</label>
+								<label class="radio-container" for="user-category-etc">기타
+									<input type="radio" id="user-category-etc" name="user-category">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<div class="i-vertical w-full">
+							<label for="member">같이 사용할 사람</label>
+							<input type="text" id="member" placeholder="제주데이터허브 회원 이메일 입력"><!--이메일 여러개 입력 가능한 form으로 처리해주세요-->
+						</div>
+						<div class="i-vertical w-full">
+							<label>연구분야</label>
+							<div class="i-group">
+								<label class="radio-container" for="plan-category-smart">스마트관광
+									<input type="radio" id="plan-category-smart" name="plan-category">
+									<span class="checkmark"></span>
+								</label>
+								<label class="radio-container" for="plan-category-mobility">모빌리티
+									<input type="radio" id="plan-category-mobility" name="plan-category">
+									<span class="checkmark"></span>
+								</label>
+								<label class="radio-container" for="plan-category-governance">거버넌스
+									<input type="radio" id="plan-category-governance" name="plan-category">
+									<span class="checkmark"></span>
+								</label>
+								<label class="radio-container" for="plan-category-etc">기타
+									<input type="radio" id="plan-category-etc" name="plan-category">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<div class="i-vertical w-full">
+							<label for="plan-subject">연구 제목 &#47; 사용 목적</label>
+							<input type="text" id="plan-subject" placeholder="예) 지역 대중교통 데이터 분석을 통한 서비스 개선 연구">
+						</div>
+						<div class="i-vertical w-full">
+							<label for="plan-contents">연구 내용</label>
+							<textarea id="plan-contents" placeholder="예)&#13;&#10;1) 목적 및 필요성&#13;&#10;- 버스 노선 개편 이후 시기별, 버스노선별 이용 현황 분석을 통해 도민과 관광객을 고려한 버스 노선 및 배차 간격 조정안 도출하여 편의 증대에 기여하고자 함&#13;&#10;2) 연구 내용&#13;&#10;- 분석기간 : 2020.5~6월&#13;&#10;- 분석데이터 : 버스 노선 정보, 버스 노선 이용 현황, 버스 카드 승하차 데이터&#13;&#10;- 분석방법 : 파이션 활용하여 버스 이용 현황, 혼잡도 분석, 예측 알고리즘 개발 등&#13;&#10;"></textarea>
+						</div>
+						<div class="i-vertical w-full">
+							<label for="plan-use">활용 계획</label>
+							<textarea id="plan-use" placeholder="예)&#13;&#10;1) 버스노선 및 배차 간격 개편안 제시&#13;&#10;2) 시간대별, 시기별 버스 정류소 예측 모델 개발"></textarea>
+						</div>
+						<div class="i-vertical w-full">
+							<label for="plan-file">연구 계획서</label>
+							<input type="file" id="plan-file">
+							<a href="" class="hyperlink tu">샘플양식 다운로드</a>
+						</div>
+						<div class="contents-footer">
+							<a data-toggle="tab" href="#step1-date" class="btn btn-outline abs-left">이전</a>
+							<button type="button" data-toggle="modal" data-target="#modal-reservation-result" class="btn btn-fill-bluedark">예약하기</button>
+						</div>
+					</form><!--//form-->
+		    	</div><!--//step2-plan-->
+			</div><!--//tab-content-->
+		</div><!--//contents-->
+	</div><!--//content-wrap-->
+</div><!--//container-->
+
+<footer class="global-footer"></footer>
+
+<!--Modal > 예약 결과-->
+<div class="modal fade" id="modal-reservation-result" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-notitle" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+				<h3>예약신청이 완료되었습니다.</h3>
+				<p>제주빅데이터센터를 이용해 주셔서 감사합니다.</p>
+            </div>
+            <div class="modal-footer">
+            	<a data-dismiss="modal" data-toggle="tab" href="#step1-date" class="btn btn-fill-bluedark">돌아가기</a>
+            </div>
+        </div><!--//modal-content-->
+    </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+</body>
+</html>

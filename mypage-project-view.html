@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="robots" content="ALL">
+<meta name="googlebot" content="ALL">
+<meta name="description" content="제주의 모든 데이터를 바로 찾아 이용할 수 있는 제주데이터허브">
+<meta name="keywords" content="제주데이터허브">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#224da0">
+<meta name="apple-mobile-web-app-title" content="제주데이터허브">
+<meta name="application-name" content="제주데이터허브">
+<meta name="msapplication-TileColor" content="#224da0">
+<meta name="theme-color" content="#ffffff">
+<title>프로젝트 관리 &#58; 제주데이터허브</title>
+<link rel="stylesheet" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/IE9.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/style.js"></script>
+</head>
+
+<body>
+<a href="#container">콘텐츠 바로가기</a>
+<div id="top"></div>
+
+<header class="global-header"></header>
+
+<div id="container">
+	<div class="page-title">
+		<span class="content-wrap">마이페이지</span>
+		<h1 class="content-wrap">프로젝트 관리</h1>
+	</div>
+	<div class="content-wrap">
+		<ul class="sidebar menu">
+			<li>
+				<span>마이데이터</span>
+				<ul>
+					<li><a href="mypage-data-list.html">데이터 관리</a></li>
+					<li class="active"><a href="mypage-project-list.html">프로젝트 관리</a></li>
+					<li><a href="mypage-favorite-list.html">즐겨찾기 관리</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>센터이용</span>
+				<ul>
+					<li><a href="mypage-reservation.html">예약 관리</a></li>
+					<li><a href="mypage-export-list.html">데이터 반출내역</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>계정</span>
+				<ul>
+					<li><a href="mypage-account.html">내 정보</a></li>
+				</ul>
+			</li>
+		</ul><!--//sidebar-->
+		<div class="contents">
+			<div class="contents-header">
+				<h1 class="contents-title">프로젝트 관리</h1>
+				<ul class="nav-tab-border">
+					<li class="active"><a data-toggle="tab" href="#project" class="btn">프로젝트</a></li>
+					<li><a data-toggle="tab" href="#member" class="btn">멤버</a></li>
+				</ul>
+			</div>
+			<div class="view-board">
+				<div class="board-header">
+					<h3>프로젝트 : 제주관광통계</h3>
+					<div>
+						<ul>
+							<li>Owner 브란덴부르크</li>
+							<li>멤버 7</li>
+						</ul>
+					</div>
+				</div><!--//board-hdeaer-->
+			</div>
+			<div class="tab-content">
+				<div id="project" class="tab-pane active">
+					<div class="section list-board section-projectkey">
+						<h5 class="caption">프로젝트키</h5>
+						<div>
+							<p>8db1bc65abb142e7b1bc65abb132e706</p>
+							<a data-toggle="modal" data-target="#modal-key-create" class="hyperlink">재발급</a>
+						</div>
+					</div><!--//list-board-->
+					<div class="section list-board">
+						<h5 class="caption">활용데이터</h5>
+						<table class="table-responsive">
+							<thead>
+								<tr>
+									<th class="cell-subject">데이터명</th>
+									<th>당일사용량 &#47; 1일쿼터량</th>
+									<th>작성자</th>
+									<th>상태</th><!--2020.10.21 상태/쿼터량 추가 위치 맞바꿈-->
+									<th>쿼터량 추가</th><!--2020.10.21 상태/쿼터량 추가 위치 맞바꿈-->
+									<th>삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="has-split">
+									<td class="cell-subject">
+										<a href="mypage-project-view-data.html" class="hyperlink">제목 제목 제목 제목 제목 제목 제목</a>
+									</td>
+									<td class="cell-linebreak"><label>당일사용량 &#47; 1일쿼터량 : </label>사용 쿼터량 100 &#47; 1000</td>
+									<td class="cell-linebreak pb16"><label>작성자 : </label>홍길동</td>
+									<td class="cell-linebreak pb16"><label>상태 : </label><span class="text-primary">승인대기</span></td><!--2020.10.21 상태/쿼터량 추가 위치 맞바꿈, 상태별 색상 추가-->
+									<td class="pb16"><label>쿼터량 추가 : </label><a data-toggle="modal" data-target="#modal-request" class="hyperlink tu">추가신청</a></td><!--2020.10.21 추가신청 modal 추가-->
+									<td class="pb16"><label>삭제 : </label><a data-toggle="modal" data-target="#modal-remove-data" class="hyperlink tu">삭제</a></td>
+								</tr>
+								<tr class="has-split">
+									<td class="cell-subject">
+										<a href="mypage-project-view-data.html" class="hyperlink">제목 제목 제목 제목 제목 제목 제목</a>
+									</td>
+									<td class="cell-linebreak"><label>당일사용량 &#47; 1일쿼터량 : </label>사용 쿼터량 100 &#47; 1000</td>
+									<td class="cell-linebreak pb16"><label>작성자 : </label>홍길동</td>
+									<td class="cell-linebreak pb16"><label>상태 : </label><span class="text-green">승인</span></td><!--2020.10.21 상태/쿼터량 추가 위치 맞바꿈, 상태별 색상 추가-->
+									<td class="pb16"><label>쿼터량 추가 : </label><a data-toggle="modal" data-target="#modal-request" class="hyperlink tu">추가신청</a></td><!--2020.10.21 추가신청 modal 추가-->
+									<td class="pb16"><label>삭제 : </label><a data-toggle="modal" data-target="#modal-remove-data" class="hyperlink tu">삭제</a></td>
+								</tr>
+								<tr class="has-split">
+									<td class="cell-subject">
+										<a href="mypage-project-view-data.html" class="hyperlink">제목 제목 제목 제목 제목 제목 제목</a>
+									</td>
+									<td class="cell-linebreak"><label>당일사용량 &#47; 1일쿼터량 : </label>사용 쿼터량 100 &#47; 1000</td>
+									<td class="cell-linebreak pb16"><label>작성자 : </label>홍길동</td>
+									<td class="cell-linebreak pb16"><label>상태 : </label><a data-toggle="modal" data-target="#modal-reject" class="text-red tu">반려</a></td><!--2020.10.21 상태/쿼터량 추가 위치 맞바꿈, 상태별 색상 추가-->
+									<td class="pb16"><label>쿼터량 추가 : </label><a data-toggle="modal" data-target="#modal-request" class="hyperlink tu">추가신청</a></td><!--2020.10.21 추가신청 modal 추가-->
+									<td class="pb16"><label>삭제 : </label><a data-toggle="modal" data-target="#modal-remove-data" class="hyperlink tu">삭제</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--//list-board-->
+					<div class="pagination">
+						<a href="" class="prev">이전</a>
+						<ul>
+							<li class="active"><a href="">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li><a href="">5</a></li>
+							<li><a href="">6</a></li>
+							<li><a href="">7</a></li>
+							<li><a href="">8</a></li>
+							<li><a href="">9</a></li>
+							<li><a href="">10</a></li>
+						</ul>
+						<a href="" class="next">다음</a>
+					</div><!--//pagination-->
+					<div class="contents-footer">
+						<a href="mypage-project-list.html" class="btn btn-outline fl">목록</a>
+						<div class="fr">
+							<a data-toggle="modal" data-target="#modal-edit" class="btn btn-outline">수정</a>
+							<a data-toggle="modal" data-target="#modal-remove-project" class="btn btn-outline-red">삭제</a>
+						</div>
+					</div>
+				</div>
+				
+				<div id="member" class="tab-pane list-person">
+					<ul class="list-card">
+						<li class="card-person">
+							<button type="button" class="btn btn-icon ico-close">삭제</button>
+							<div class="person-image" style="background-image:url(images/sample-member.jpg)"></div>
+							<h6>abcdeabcdeabcdeabcdeabcde</h6>
+							<span class="label outline-gray radius">Owner</span>
+							<span class="label fill-bluedark">Member</span>
+						</li>
+						<li class="card-person">
+							<button type="button" class="btn btn-icon ico-close">삭제</button>
+							<div class="person-image" style="background-image:url(images/sample-member.jpg)"></div>
+							<h6>aksjl</h6>
+							<span class="label fill-bluedark">Owner</span>
+							<span class="label outline-gray radius">Member</span>
+						</li>
+						<li class="card-person">
+							<button type="button" class="btn btn-icon ico-close">삭제</button>
+							<div class="person-image"></div>
+							<h6>브란덴부르크</h6>
+							<span class="label outline-gray radius">Owner</span>
+							<span class="label fill-bluedark">Member</span>
+						</li>
+						<li class="card-person">
+							<button type="button" class="btn btn-icon ico-close">삭제</button>
+							<div class="person-image"></div>
+							<h6>연우아빠</h6>
+							<span class="label outline-gray radius">Owner</span>
+							<span class="label fill-bluedark">Member</span>
+						</li>
+						<li class="card-person">
+							<button type="button" class="btn btn-icon ico-close">삭제</button>
+							<div class="person-image"></div>
+							<h6>TP매니저</h6>
+							<span class="label outline-gray radius">Owner</span>
+							<span class="label fill-bluedark">Member</span>
+						</li>
+						<li class="card-person">
+							<button type="button" class="btn btn-icon ico-close">삭제</button>
+							<div class="person-image"></div>
+							<h6>abcde</h6>
+							<span class="label outline-gray radius">Owner</span>
+							<span class="label fill-bluedark">Member</span>
+						</li>
+					</ul>
+					<div class="contents-footer">
+						<a data-toggle="modal" data-target="#modal-member" class="btn btn-fill-bluedark fr">멤버 추가</a>
+					</div>
+				</div>
+			</div>
+			
+		</div><!--//contents-->
+	</div><!--//content-wrap-->
+</div><!--//container-->
+
+<footer class="global-footer"></footer>
+
+<!--Modal-->
+<div class="modal fade" id="modal-key-create" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-notitle modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<h3>프로젝트키가 재발급되었습니다.</h3>
+            </div><!--//modal-body-->
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--2020.10.21 반려 modal 추가-->
+<div class="modal fade" id="modal-reject" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+            		<h3>반려 사유</h3>
+            	</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<p>반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유</p>
+            </div>
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//2020.10.21 반려 modal 추가-->
+
+<!--2020.10.21 추가신청 modal 추가-->
+<div class="modal fade" id="modal-request" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+            		<h3>쿼터량 추가 신청</h3>
+            	</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<h3>현재 쿼터량 : 3,404</h3>
+            	<form>
+            		<div class="i-vertical w-full">
+						<label for="request-quarter">신청 쿼터량</label>
+						<input type="number" id="request-quarter">
+					</div>
+            	</form>
+            </div><!--//modal-body-->
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-outline">취소</button>
+            	<button type="submit" class="btn btn-fill-bluedark">신청</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//2020.10.21 추가신청 modal 추가-->
+
+<div class="modal fade" id="modal-remove-data" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-notitle modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<h3>정말 삭제하시겠습니까?</h3>
+            </div><!--//modal-body-->
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-outline">취소</button>
+            	<button type="submit" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-edit" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+            		<h3>프로젝트 수정</h3>
+            	</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<form>
+            		<div class="i-vertical w-full">
+						<label for="project-subject">프로젝트명</label>
+						<input type="text" id="project-subject">
+					</div>
+            		<div class="i-vertical w-full">
+						<label for="project-member">멤버</label>
+						<input type="text" id="project-member" placeholder="이메일 or 닉네임 입력" class="i-icon-right ico-search"><!--2020.10.20 placeholder / class 추가-->
+					</div>
+            	</form>
+            </div><!--//modal-body-->
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-outline">취소</button>
+            	<button type="submit" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-remove-project" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-notitle modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<h3>프로젝트를 정말 삭제하시겠습니까?</h3>
+            	<p>활용중인 데이터도 함께 삭제됩니다.</p>
+            </div><!--//modal-body-->
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-outline">취소</button>
+            	<button type="submit" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-member" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+            		<h3>멤버 추가</h3>
+            	</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<form>
+            		<div class="i-vertical w-full">
+						<label for="member-add">추가할 멤버</label><!--2020.10.20 텍스트 수정-->
+						<input type="text" id="member-add" placeholder="이메일 or 닉네임 입력" class="i-icon-right ico-search"><!--2020.10.20 placeholder / class 추가-->
+					</div>
+            	</form>
+            </div>
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-outline">취소</button>
+            	<button type="submit" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//modal-->
+
+</body>
+</html>

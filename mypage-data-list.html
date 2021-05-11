@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="robots" content="ALL">
+<meta name="googlebot" content="ALL">
+<meta name="description" content="제주의 모든 데이터를 바로 찾아 이용할 수 있는 제주데이터허브">
+<meta name="keywords" content="제주데이터허브">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#224da0">
+<meta name="apple-mobile-web-app-title" content="제주데이터허브">
+<meta name="application-name" content="제주데이터허브">
+<meta name="msapplication-TileColor" content="#224da0">
+<meta name="theme-color" content="#ffffff">
+<title>데이터 관리 &#58; 제주데이터허브</title>
+<link rel="stylesheet" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/IE9.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/collapse.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/tooltipster.bundle.min.js"></script><!--2020.10.25 tooltip js 추가-->
+<script src="js/style.js"></script>
+</head>
+
+<body class="page-data-list">
+<a href="#container">콘텐츠 바로가기</a>
+<div id="top"></div>
+
+<header class="global-header"></header>
+
+<div id="container">
+	<div class="page-title">
+		<span class="content-wrap">마이페이지</span>
+		<h1 class="content-wrap">데이터 관리</h1>
+	</div>
+	<div class="content-wrap">
+		<ul class="sidebar menu">
+			<li>
+				<span>마이데이터</span>
+				<ul>
+					<li class="active"><a href="mypage-data-list.html">데이터 관리</a></li>
+					<li><a href="mypage-project-list.html">프로젝트 관리</a></li>
+					<li><a href="mypage-favorite-list.html">즐겨찾기 관리</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>센터이용</span>
+				<ul>
+					<li><a href="mypage-reservation.html">예약 관리</a></li>
+					<li><a href="mypage-export-list.html">데이터 반출내역</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>계정</span>
+				<ul>
+					<li><a href="mypage-account.html">내 정보</a></li>
+				</ul>
+			</li>
+		</ul><!--//sidebar-->
+		<div class="contents">
+			<div class="contents-header">
+				<h1 class="contents-title">데이터 관리</h1>
+				<form class="search-board">
+					<select title="제목 혹은 내용 선택">
+						<option>제목</option>
+						<option>내용</option>
+						<option>제목 &#43; 내용</option>
+					</select>
+					<input type="search" placeholder="검색어 입력" title="검색어 입력">
+					<button type="submit" class="btn btn-fill-bluedark">검색</button>
+				</form><!--//search-board-->
+			</div>
+			<div class="list-board">
+				<p class="caption">총 980 개 항목
+					<label class="checkbox-container" for="select-confirmed">승인대기건만 보기
+						<input type="checkbox" id="select-confirmed">
+						<span class="checkmark"></span>
+					</label>
+				</p>
+				<table class="table-responsive">
+					<thead>
+						<tr>
+							<th class="cell-number">번호</th>
+							<th class="cell-subject">데이터명</th>
+							<th>등록일</th>
+							<th>수정일</th>
+							<th>등록자</th>
+							<th>쿼터량 신청</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="has-split">
+							<td class="cell-number">5,456</td>
+							<td class="cell-subject">
+								<span class="label fill-bluedark">인증</span>
+								<a href="mypage-data-view.html" class="hyperlink">제목 제목 제목 제목 제목 제목 제목</a>
+								<div class="list-label">
+									<span class="label outline-skyblue">API</span>
+									<span class="label outline-gray">LINK</span>
+									<span class="label outline-blue">FILE</span>
+								</div>
+							</td>
+							<td class="cell-linebreak"><label>등록일 : </label>2019.02.22</td>
+							<td><label>수정일 : </label>2020.03.03</td>
+							<td class="cell-linebreak"><label>등록자 : </label>홍길동</td>
+							<td class="cell-linebreak pb16"><label>쿼터량 신청 : </label><a data-toggle="modal" data-target="#modal-quarter" class="hyperlink tu">대기00건 &#47; 총 신청000건</a></td>
+						</tr>
+						<tr class="has-split">
+							<td class="cell-number">5,456</td>
+							<td class="cell-subject">
+								<span class="label fill-bluedark">인증</span>
+								<a href="mypage-data-view.html" class="hyperlink">제목 제목 제목 제목 제목 제목 제목</a>
+								<div class="list-label">
+									<span class="label outline-skyblue">API</span>
+									<span class="label outline-gray">LINK</span>
+									<span class="label outline-blue">FILE</span>
+								</div>
+							</td>
+							<td class="cell-linebreak"><label>등록일 : </label>2019.02.22</td>
+							<td><label>수정일 : </label>2020.03.03</td>
+							<td class="cell-linebreak"><label>등록자 : </label>홍길동</td>
+							<td class="cell-linebreak pb16"><label>쿼터량 신청 : </label><a data-toggle="modal" data-target="#modal-quarter" class="hyperlink tu">대기00건 &#47; 총 신청000건</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--//list-board-->
+			<div class="pagination">
+				<a href="" class="prev">이전</a>
+				<ul>
+					<li class="active"><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li><a href="">6</a></li>
+					<li><a href="">7</a></li>
+					<li><a href="">8</a></li>
+					<li><a href="">9</a></li>
+					<li><a href="">10</a></li>
+				</ul>
+				<a href="" class="next">다음</a>
+			</div><!--//pagination-->
+		</div><!--//contents-->
+	</div><!--//content-wrap-->
+</div><!--//container-->
+
+<footer class="global-footer"></footer>
+
+<!--Modal-->
+<div class="modal fade" id="modal-quarter" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-quarter" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+            		<h3>쿼터량 신청</h3>
+            	</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<h3>데이터명 : 버스 정류소 기본 정보</h3>
+            	<p>기본 쿼터량 2,000</p><!--2020.10.20 텍스트 수정 : 현재 쿼리량 -> 기본 쿼터량-->
+            	<ul>
+					<li>총 승인신청 230</li>
+					<li>승인대기 14</li>
+					<li>승인완료 32</li>
+					<li>승인반려 0</li>
+				</ul>
+				<h5 class="caption">요청 쿼터 리스트</h5>
+				<div class="table-scroll">
+					<table class="table-responsive">
+						<thead>
+							<tr>
+								<th class="cell-subject">프로젝트 &#47; 담당자</th>
+								<th>현재 쿼터량</th><!--2020.10.20 컬럼 추가-->
+								<th>요청 쿼터량</th><!--2020.10.20 텍스트 수정 : 쿼리량 -> 쿼터량-->
+								<th>신청자</th>
+								<th>신청일</th>
+								<th>상태</th>
+								<th>처리일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="has-split">
+								<td class="cell-subject">제주투어 &#47; Name<br>제주도 관광객 이동동선 연구를 위해 많은 데이터 필요</td>
+								<td class="cell-linebreak"><label>현재 쿼터량 : </label>23,043</td><!--2020.10.20 컬럼 추가-->
+								<td><label>요청 쿼터량 : </label>23,043</td><!--2020.10.20 클래스 삭제 : 'cell-linebreak'-->
+								<td><label>신청자 : </label>홍길동</td>
+								<td class="cell-linebreak"><label>신청일 : </label>2020.03.03</td>
+								
+								<!--2020.10.25 collapse 기능 추가
+									- href의 타겟 id 값 동적으로 처리 필요
+								-->
+								<td><label>상태 : </label><a data-toggle="collapse" href="#request-1" aria-expanded="true" class="btn-collapse collapsed text-primary tu">승인대기</a></td>
+								
+								<td class="cell-linebreak pb16"><label>처리일 : </label>2020.03.03 22:56:45</td>
+							</tr>
+							
+							<!--2020.10.25 collapse form 추가-->
+							<tr id="request-1" class="collapse form-request-status"><!--2020.10.25 id 값 동적으로 처리 필요-->
+								<td colspan="7">
+									<form class="tl">
+										<div class="i-vertical">
+											<label>상태 변경</label>
+											<div class="i-group">
+												<label class="radio-container" for="request-confirm">승인
+													<input type="radio" id="request-confirm" name="request-status">
+													<span class="checkmark"></span>
+												</label>
+												<label class="radio-container" for="request-reject">반려
+													<input type="radio" id="request-reject" name="request-status">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+										
+										<!--2020.10.25 반려 사유는 위 라디오버튼에서 '반려'를 누른 경우만 나타나게 처리해주세요.-->
+										<div class="i-vertical w-full">
+											<label for="reject-reason">반려 사유</label>
+											<input type="text" id="reject-reason">
+										</div>
+										
+										<div class="contents-footer">
+											<button type="button" data-toggle="collapse" href="#request-1" class="btn btn-outline">취소</button><!--2020.10.25 href의 타겟 id 값 동적으로 처리 필요-->
+											<button type="submit" class="btn btn-fill-bluedark">확인</button>
+										</div>
+									</form>
+								</td>
+							</tr>
+							<!--//2020.10.25 collapse form 추가-->
+							
+							<tr class="has-split">
+								<td class="cell-subject">제주투어 &#47; Name<br>제주도 관광객 이동동선 연구를 위해 많은 데이터 필요</td>
+								<td class="cell-linebreak"><label>현재 쿼터량 : </label>23,043</td><!--2020.10.20 컬럼 추가-->
+								<td><label>요청 쿼터량 : </label>23,043</td><!--2020.10.20 클래스 삭제 : 'cell-linebreak'-->
+								<td><label>신청자 : </label>홍길동</td>
+								<td class="cell-linebreak"><label>신청일 : </label>2020.03.03</td>
+								<td><label>상태 : </label><span class="text-green">승인</span></td><!--2020.10.20 상태별 스타일 추가 (span 태그 추가)-->
+								<td class="cell-linebreak pb16"><label>처리일 : </label>2020.03.03 22:56:45</td>
+							</tr>
+							<tr class="has-split">
+								<td class="cell-subject">제주투어 &#47; Name<br>제주도 관광객 이동동선 연구를 위해 많은 데이터 필요</td>
+								<td class="cell-linebreak"><label>현재 쿼터량 : </label>23,043</td><!--2020.10.20 컬럼 추가-->
+								<td><label>요청 쿼터량 : </label>23,043</td><!--2020.10.20 클래스 삭제 : 'cell-linebreak'-->
+								<td><label>신청자 : </label>홍길동</td>
+								<td class="cell-linebreak"><label>신청일 : </label>2020.03.03</td>
+								<td><label>상태 : </label><span class="text-green">승인</span></td><!--2020.10.20 상태별 스타일 추가 (span 태그 추가)-->
+								<td class="cell-linebreak pb16"><label>처리일 : </label>2020.03.03 22:56:45</td>
+							</tr>
+							<tr class="has-split">
+								<td class="cell-subject">제주투어 &#47; Name<br>제주도 관광객 이동동선 연구를 위해 많은 데이터 필요</td>
+								<td class="cell-linebreak"><label>현재 쿼터량 : </label>23,043</td><!--2020.10.20 컬럼 추가-->
+								<td><label>요청 쿼터량 : </label>23,043</td><!--2020.10.20 클래스 삭제 : 'cell-linebreak'-->
+								<td><label>신청자 : </label>홍길동</td>
+								<td class="cell-linebreak"><label>신청일 : </label>2020.03.03</td>
+								<td><label>상태 : </label><span class="text-green">승인</span></td><!--2020.10.20 상태별 스타일 추가 (span 태그 추가)-->
+								<td class="cell-linebreak pb16"><label>처리일 : </label>2020.03.03 22:56:45</td>
+							</tr>
+							<tr class="has-split">
+								<td class="cell-subject">제주투어 &#47; Name<br>제주도 관광객 이동동선 연구를 위해 많은 데이터 필요</td>
+								<td class="cell-linebreak"><label>현재 쿼터량 : </label>23,043</td><!--2020.10.20 컬럼 추가-->
+								<td><label>요청 쿼터량 : </label>23,043</td><!--2020.10.20 클래스 삭제 : 'cell-linebreak'-->
+								<td><label>신청자 : </label>홍길동</td>
+								<td class="cell-linebreak"><label>신청일 : </label>2020.03.03</td>
+								<td><label>상태 : </label><span class="tooltip-arrowless text-red tu" title="반려사유 반려사유 반려사유 반려사유 반려사유">반려</a></td><!--2020.10.25 반려 modal -> tooltip-->
+								<td class="cell-linebreak pb16"><label>처리일 : </label>2020.03.03 22:56:45</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+            </div><!--//modal-body-->
+        </div>
+    </div>
+</div>
+
+<!--2020.10.20 반려 modal 추가-->
+<div class="modal fade" id="modal-reject" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<div class="modal-title">
+            		<h3>반려 사유</h3>
+            	</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+            </div>
+            <div class="modal-body">
+            	<p>반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유 반려 사유</p>
+            </div>
+            <div class="modal-footer">
+            	<button type="button" data-dismiss="modal" class="btn btn-fill-bluedark">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//2020.10.20 반려 modal 추가-->
+
+<!--//modal-->
+
+</body>
+</html>

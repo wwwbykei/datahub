@@ -1,0 +1,37 @@
+
+// Tabs
+.tab-content{
+    > .tab-pane{.hidden}
+    > .active{.block}
+}
+.nav-tab-border{.horiz-center;.clear;.mb(32px);
+	@media @moretablet{.mb(64px)}
+	li{
+		@media @moretablet{.w(160px)}
+		&:first-child{
+			a{.radius-right(0)}
+		}
+		&:nth-child(2):not(:last-child){
+			a{.radius(0)}
+		}
+		&:last-child{
+			a{.radius-left(0)}
+		}
+		a{.block}
+		&:not(.active){
+			a{.btn-outline}
+			&:not(:first-child){
+				// a{.blnone}
+			}
+		}
+		&.active{
+			a{.btn-fill-bluedark}
+		}
+	}
+}
+.nav-tab-underline{.overh;
+	li{.fl;
+		&.active{.bb(@blue-dark,2px);.bold;.c(@color-primary)}
+	}
+	a{.block}
+}

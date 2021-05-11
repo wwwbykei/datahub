@@ -1,0 +1,39 @@
+
+/* Pagination */
+@pagenation-size: 40px;
+.pagination{.overh;.rel;.fl;.rel;.w-full;.mt(40px);.tc;
+	ul{.overh;.in-block;.w(@pagenation-size * 5);.h(@pagenation-size);
+		@media @moretablet{.w(@pagenation-size * 10)}
+	}
+	a{.lh(@pagenation-size)}
+	li{.boxsize;.block;.fl;.w(@pagenation-size);.h(@pagenation-size);.radius(50%);
+		&:hover:not(.active){.b(lighten(@blue-dark,50%));.c(@color-primary)}
+		&.active{.bg(@color-primary);.c(#fff)}
+		a{.block}
+	}
+	.prev,.next{.abs;top:0;.w(24px);.bgs(24px);.text-hidden;
+		@media @moretablet{.w(14%)}
+	}
+	.prev{left:5.55%;.mr(32px);.ico-arrow-left;.bgpos(50%,50%);
+		@media @moretablet{left:6.52%;.mr(8%);
+			&:before{.b-split(20px)}
+		}
+	}
+	.next{right:5.55%;.ml(32px);.ico-arrow-right;.bgpos(50%,50%);
+		@media @moretablet{right:6.52%;.ml(8%);
+			&:before{.b-split(20px,left)}
+		}
+	}
+}
+/*.pagination{.overh;.mt(40px);.tc;
+	ul{.in-block;.br;.bb;.radius}
+	li{.block;.fl;.w(40px);.h(40px);.bt;.bl;
+		&.active{.bg(#333);.c(#fff)}
+		&:first-child{.radius-left}
+		&:last-child{.radius-right}
+	}
+	a{.block;.lh(40px);.montserrat}
+	.prev,.next{.text-hidden}
+	.prev{.bgimg('ico-arrow-left.png',50%,50%)}
+	.next{.bgimg('ico-arrow-right.png',50%,50%)}
+}*/

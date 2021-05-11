@@ -1,0 +1,41 @@
+
+// Button
+.btn{.in-block;.boxsize;.radius(4px);.tc;.medium;.break;.nowrap;.pointer;.valign;
+	&:not(.btn-h32){
+		@media @totablet{.btn-h40}
+		@media @desktop{.btn-h48}
+	}
+}
+.btn-icon{.bgpos(50%,50%);.text-hidden}
+.btn-h32{.p(5px 12px 4px);.fs(14);
+	&.btn-radius{.radius(16px)}
+	&.btn-icon-right{.pr(32px);.bgpos(right 8px,top 50%);.bgs(16px)}
+}
+.btn-h40{.p(@input-padding-base);.fs(14);
+	&.btn-radius{.radius(20px)}
+	&.btn-icon{.bgs(20px)}
+	&.btn-icon-left{.pl(32px);.bgpos(8px,50%);.bgs(20px)}
+	&.btn-icon-right{.pr(32px);.bgpos(right 8px,top 50%);.bgs(20px)}
+}
+.btn-h48{.p(@input-padding-large);.fs(16);
+	&.btn-radius{.radius(24px)}
+	&.btn-icon{.bgs(24px)}
+	&.btn-icon-left{.pl(38px);.bgpos(8px,50%);.bgs(24px)}
+	&.btn-icon-right{.pr(38px);.bgpos(right 8px,top 50%);.bgs(24px)}
+}
+.btn-outline{.b;.bgw;.c(#666);
+	&:hover{.b(@blue);.c(@blue-dark)}
+}
+.btn-outline-red{.b(@red);.bgw;.c(@red);
+	&:hover{.opacity(.6)}
+}
+.btn-outline-blue{.b(@blue);.bgw;.c(@blue);
+	&:hover{.opacity(.6)}
+}
+.btn-outline-bluedark{.b(@blue-dark);.bgw;.c(@blue-dark);
+	&:hover{.opacity(.6)}
+}
+.btn-fill-bluedark{.b(@blue-dark);.bg(@blue-dark);.c(#fff);
+	&:hover{.opacity(.6)}
+}
+// .btn-gradient{background:rgb(70,56,214);background:linear-gradient(135deg, rgba(70,56,214,1) 0%, rgba(32,196,203,1) 100%);.c(#fff)}

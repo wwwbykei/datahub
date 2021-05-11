@@ -1,0 +1,333 @@
+
+<script src="js/tab.js"></script>
+<script src="js/tooltipster.bundle.min.js"></script>
+<!--datepicker-->
+<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/moment.min.js"></script>
+<!--//datepicker-->
+<script>
+$( document ).ready( function(){
+	datepicker();
+});
+</script>
+
+<div class="contents-header">
+	<h1 class="contents-title">일반분석</h1>
+	<ul class="nav-tab-border">
+		<li class="active"><a data-toggle="tab" href="#search" class="btn">검색조건</a></li>
+		<li><a data-toggle="tab" href="#data" class="btn">사용데이터정보</a></li>
+	</ul>
+</div>
+<div class="tab-content">
+	<div id="search" class="tab-pane active">
+		<div class="form-filter filter-addable">
+			<form>
+				<div class="filter-row">
+					<ul>
+						<li>
+							<label>성별<a data-tooltip-content="#tooltip-gender" class="ico-help tooltip-arrowless"></a></label>
+							<select title="성별 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>남자</option>
+								<option>여자</option>
+							</select>
+						</li>
+						<li>
+							<label>연령대<a data-tooltip-content="#tooltip-age" class="ico-help tooltip-arrowless"></a></label>
+							<select title="연령대 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>10대</option>
+								<option>20대</option>
+							</select>
+						</li>
+						<li>
+							<label>지역<a data-tooltip-content="#tooltip-location" class="ico-help tooltip-arrowless"></a></label>
+							<select title="지역 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>제주특별자치도</option>
+								<option></option>
+							</select>
+						</li>
+						<li>
+							<label>상세 지역<a data-tooltip-content="#tooltip-location-detail" class="ico-help tooltip-arrowless"></a></label>
+							<select title="상세 지역 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>김녕리</option>
+								<option></option>
+							</select>
+						</li>
+					</ul>
+					<button type="button" class="btn btn-outline btn-icon ico-close">삭제</button>
+				</div><!--//filter-row-->
+				<div class="filter-row">
+					<ul>
+						<li>
+							<label>성별<a data-tooltip-content="#tooltip-gender" class="ico-help tooltip-arrowless"></a></label>
+							<select title="성별 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>남자</option>
+								<option>여자</option>
+							</select>
+						</li>
+						<li>
+							<label>연령대<a data-tooltip-content="#tooltip-age" class="ico-help tooltip-arrowless"></a></label>
+							<select title="연령대 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>10대</option>
+								<option>20대</option>
+							</select>
+						</li>
+						<li>
+							<label>지역<a data-tooltip-content="#tooltip-location" class="ico-help tooltip-arrowless"></a></label>
+							<select title="지역 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>제주특별자치도</option>
+								<option></option>
+							</select>
+						</li>
+						<li>
+							<label>상세 지역<a data-tooltip-content="#tooltip-location-detail" class="ico-help tooltip-arrowless"></a></label>
+							<select title="상세 지역 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>김녕리</option>
+								<option></option>
+							</select>
+						</li>
+					</ul>
+					<button type="button" class="btn btn-fill-bluedark">적용</button>
+				</div><!--//filter-row-->
+				<button type="button" class="btn btn-outline btn-icon ico-add">추가</button>
+			</form>
+		</div><!--//filter-addable-->
+		
+		
+		<!--기간 선택하는 검색 방식용-->
+		<!--<div class="form-filter filter-single">
+			<form>
+				<div class="filter-row">
+					<ul>
+						<li>
+							<label>선택데이터<a data-tooltip-content="#tooltip-data" class="ico-help tooltip-arrowless"></a></label>
+							<select title="데이터 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option></option>
+								<option></option>
+							</select>
+						</li>
+						<li>
+							<label>기준연월<a data-tooltip-content="#tooltip-base" class="ico-help tooltip-arrowless"></a></label>
+							<select title="기준연월 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option></option>
+								<option></option>
+							</select>
+						</li>
+						<li class="form-fromto">
+							<label>검색기간<a data-tooltip-content="#tooltip-period" class="ico-help tooltip-arrowless"></a></label>
+							<input type="text" id="month-start" class="i-month"><span>-</span><input type="text" id="month-end" class="i-month">
+						</li>
+						<li>
+							<label>성별<a data-tooltip-content="#tooltip-gender" class="ico-help tooltip-arrowless"></a></label>
+							<select title="성별 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>남자</option>
+								<option>여자</option>
+							</select>
+						</li>
+						<li>
+							<label>연령대<a data-tooltip-content="#tooltip-age" class="ico-help tooltip-arrowless"></a></label>
+							<select title="연령대 선택">
+								<option value="" selected disabled hidden>선택</option>
+								<option>전체</option>
+								<option>10대</option>
+								<option>20대</option>
+							</select>
+						</li>
+					</ul>
+					<button type="button" class="btn btn-fill-bluedark">변경</button>
+				</div>
+			</form>
+		</div>--><!--//filter-single-->
+		
+		
+		<img src="images/sample-image.jpg" alt="">
+		<div class="contents-footer">
+			<a href="infographic-general-list.html" class="btn btn-outline fl">목록</a>
+			<div class="fr">
+				<button type="button" class="btn btn-outline btn-icon-left ico-share">공유</button>
+				<select title="다운로드" class="fr">
+					<option value="" selected disabled hidden>다운로드</option>
+					<option>JPG</option>
+					<option>PDF</option>
+					<option>Excel</option>
+					<option>CSV</option>
+				</select>
+			</div>
+		</div>
+	</div><!--//tab-pane-->
+	<div id="data" class="tab-pane">
+		<div class="view-board">
+			<div class="board-header">
+				<h3><span class="label fill-bluedark">인증</span>[카드] 성별/연령대로 비교한 소비 빈도 및 1회 사용금액</h3>
+				<div>
+					<span class="label outline-skyblue">API</span>
+					<span class="label outline-blue">FILE</span>
+					<span class="label outline-gray">LINK</span>
+					<ul>
+						<li>조회 2,123</li>
+						<li>즐겨찾기 123</li>
+					</ul>
+				</div>
+			</div>
+			<div class="board-description">
+				<dl>
+					<dt>데이터 소스</dt>
+					<dd>BC 카드 데이터</dd>
+				</dl>
+				<dl>
+					<dt>데이터 설명</dt>
+					<dd>2018.01~2019.01 까지 수집된 관광객 카드 사용 정보입니다.</dd>
+				</dl>
+			</div>
+		</div><!--//view-board-->
+		<div class="section list-board">
+			<h5 class="caption">활용데이터</h5>
+			<table class="table-responsive">
+				<thead>
+					<tr>
+					
+						<!--다운로드 기능이 필요한 경우 사용-->
+						<!--<th class="cell-check">
+							<label class="checkbox-container" for="select-all">
+								<input type="checkbox" id="select-all">
+								<span class="checkmark"></span>
+							</label>
+						</th>-->
+						
+						<th class="cell-subject">데이터명</th>
+						<th>분석기간</th>
+						<th>등록일</th>
+						<th>등록자</th>
+						<th>조회</th>
+						<th>즐겨찾기</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="has-split"><!--다운로드 기능이 필요한 경우 클래스 추가 : 'has-check'-->
+						
+						<!--다운로드 기능이 필요한 경우 사용-->
+						<!--<td class="cell-check">
+							<label class="checkbox-container" for="select-item1">
+								<input type="checkbox" id="select-item1">
+								<span class="checkmark"></span>
+							</label>
+						</td>-->
+						
+						<td class="cell-subject">
+							<a href="data-view.html" class="hyperlink">제목 제목 제목 제목 제목 제목 제목</a>
+						</td>
+						<td class="cell-linebreak"><label>분석기간 : </label>2018.01 ~ 2019.01</td>
+						<td><label>등록일 : </label>2019.02.22</td>
+						<td class="cell-linebreak pb16"><label>등록자 : </label>홍길동</td>
+						<td class="pb16"><label>조회 : </label>4,564</td>
+						<td class="pb16"><label>즐겨찾기 : </label>200</td>
+					</tr>
+					<tr class="has-split"><!--다운로드 기능이 필요한 경우 클래스 추가 : 'has-check'-->
+					
+						<!--다운로드 기능이 필요한 경우 사용-->
+						<!--<td class="cell-check">
+							<label class="checkbox-container" for="select-item1">
+								<input type="checkbox" id="select-item1">
+								<span class="checkmark"></span>
+							</label>
+						</td>-->
+						
+						<td class="cell-subject">
+							<a href="data-view.html" class="hyperlink">제목 제목 제목 제목 제목 제목 제목</a>
+						</td>
+						<td class="cell-linebreak"><label>분석기간 : </label>2018.01 ~ 2019.01</td>
+						<td><label>등록일 : </label>2019.02.22</td>
+						<td class="cell-linebreak pb16"><label>등록자 : </label>홍길동</td>
+						<td class="pb16"><label>조회 : </label>4,564</td>
+						<td class="pb16"><label>즐겨찾기 : </label>200</td>
+					</tr>
+				</tbody>
+			</table>
+		</div><!--//list-board-->
+		
+		<!--다운로드 기능이 필요한 경우 사용-->
+		<!--<div class="contents-footer">
+			<select title="다운로드" class="fr">
+				<option value="" selected disabled hidden>다운로드</option>
+				<option>JPG</option>
+				<option>PDF</option>
+				<option>Excel</option>
+				<option>CSV</option>
+			</select>
+		</div>-->
+		
+	</div><!--//tab-pane-->
+</div><!--//tab-content-->
+
+<!--Tooltip-->
+<div class="tooltip_templates">
+    <div id="tooltip-gender">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-age">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-location">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-location-detail">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-data">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-base">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-period">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<div class="tooltip_templates">
+    <div id="tooltip-gender">
+        <h5>제목 제목 제목 제목 제목 제목 제목 제목</h5>
+        <p>설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명 설명</p>
+    </div>
+</div>
+<!--//Tooltip-->

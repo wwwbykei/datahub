@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="robots" content="ALL">
+<meta name="googlebot" content="ALL">
+<meta name="description" content="제주의 모든 데이터를 바로 찾아 이용할 수 있는 제주데이터허브">
+<meta name="keywords" content="제주데이터허브">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#224da0">
+<meta name="apple-mobile-web-app-title" content="제주데이터허브">
+<meta name="application-name" content="제주데이터허브">
+<meta name="msapplication-TileColor" content="#224da0">
+<meta name="theme-color" content="#ffffff">
+<title>데이터 &#58; 제주데이터허브</title>
+<link rel="stylesheet" href="css/style.css">
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<script src="js/IE9.js"></script>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/style.js"></script>
+<script>
+$( document ).ready( function(){
+	$( ".carousel" ).slick({
+		arrows: false,
+		dots: true,
+    	autoplay: true,
+		autoplaySpeed: 2000,
+		infinite: true
+	});
+});
+</script>
+</head>
+
+<body class="page-data-list">
+<a href="#container">콘텐츠 바로가기</a>
+<div id="top"></div>
+
+<header class="global-header"></header>
+
+<div id="container">
+	<div class="page-title">
+		<h1 class="content-wrap">데이터</h1>
+	</div>
+	<form class="content-wrap">
+		<ul class="sidebar filter">
+			<li>
+				<h5>데이터 카테고리</h5>
+				<ul>
+					<li>
+						<label class="checkbox-container" for="category-all">전체
+							<input type="checkbox" id="category-all">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="category-tour">관광, 여행
+							<input type="checkbox" id="category-tour">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="category-population">인구, 생활
+							<input type="checkbox" id="category-population">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="category-education">교육, 행정
+							<input type="checkbox" id="category-education">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="category-health">보건, 복지
+							<input type="checkbox" id="category-health">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="category-traffic">교통, 안전
+							<input type="checkbox" id="category-traffic">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="category-economy">소비, 경제
+							<input type="checkbox" id="category-economy">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="category-environment">환경, 재난
+							<input type="checkbox" id="category-environment">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="category-farm">농축수산
+							<input type="checkbox" id="category-farm">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h5>데이터 유형</h5>
+				<ul>
+					<li>
+						<label class="checkbox-container" for="type-api">API
+							<input type="checkbox" id="type-api">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="type-file">파일
+							<input type="checkbox" id="type-file">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+					<li>
+						<label class="checkbox-container" for="type-link">링크
+							<input type="checkbox" id="type-link">
+							<span class="checkmark"></span>
+						</label>
+						<span>3,654</span>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h5>인증 기관</h5>
+				<ul>
+					<li>
+						<label class="checkbox-container" for="certificate-hub">허브인증
+							<input type="checkbox" id="certificate-hub">
+							<span class="checkmark"></span>
+						</label>
+					</li>
+				</ul>
+			</li>
+		</ul><!--//sidebar-->
+		<div class="contents">
+			<div class="section-carousel">
+				<div>
+					<h5>인기 데이터</h5>
+					<ul class="list-card carousel">
+						<li class="card-text-number box-shadow-material">
+							<a href="infographic-general-view.html">
+								<i class="ico-number bg-bluedark">1</i>
+								<h6><span class="label outline-skyblue">API</span>제주특별자치도_관광통계정보 제주특별자치도_관광통계정보</h6>
+								<p>
+									<span>2020.07.08</span>
+									<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+								</p>
+							</a>
+						</li>
+						<li class="card-text-number box-shadow-material">
+							<a href="infographic-general-view.html">
+								<i class="ico-number bg-blue">2</i>
+								<h6><span class="label outline-gray">LINK</span>제주특별자치도_관광통계정보</h6>
+								<p>
+									<span>2020.07.08</span>
+									<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+								</p>
+							</a>
+						</li>
+						<li class="card-text-number box-shadow-material">
+							<a href="infographic-general-view.html">
+								<i class="ico-number bg-skyblue">3</i>
+								<h6><span class="label outline-blue">FILE</span>제주특별자치도_관광통계정보</h6>
+								<p>
+									<span>2020.07.08</span>
+									<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h5>최신 데이터</h5>
+					<ul class="list-card carousel">
+						<li class="card-text-icon box-shadow-material">
+							<a href="infographic-general-view.html">
+							
+							
+							<!--카테고리별 아이콘 class
+							- 관광,여행 : ico-tour
+							- 교육,행정 : ico-education
+							- 교통,안전 : ico-traffic
+							- 인구, 생활 : ico-population
+							- 농축수산 : ico-farm
+							- 보건,복지 : ico-health
+							- 소비, 지출 : ico-economy
+							- 환경, 재난 : ico-environment
+							-->
+							
+							
+							
+								<i class="ico-economy bg-skyblue-light"></i>
+								<h6><span class="label outline-blue">FILE</span>제주특별자치도_관광통계정보</h6>
+								<p>
+									<span>2020.07.08</span>
+									<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+								</p>
+							</a>
+						</li>
+						<li class="card-text-icon box-shadow-material">
+							<a href="infographic-general-view.html">
+								<i class="ico-population bg-green-light"></i>
+								<h6><span class="label outline-blue">FILE</span>제주특별자치도_관광통계정보</h6>
+								<p>
+									<span>2020.07.08</span>
+									<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+								</p>
+							</a>
+						</li>
+						<li class="card-text-icon box-shadow-material">
+							<a href="infographic-general-view.html">
+								<i class="ico-tour bg-gray-blue"></i>
+								<h6><span class="label outline-blue">FILE</span>제주특별자치도_관광통계정보</h6>
+								<p>
+									<span>2020.07.08</span>
+									<span>제주특별자치도의 관광객 입도현황 정보를 제공합니다. 제주특별자치도의 관광객 입도현황 정보를 제공합니다.</span>
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!--//carousel section-->
+			<div class="section-filter">
+				<div>
+					<div class="form-table">
+    					<div><input type="search" placeholder="키워드를 입력하세요." title="검색어 입력"></div>
+						<button type="submit" class="btn btn-fill-bluedark">검색</button>
+					</div>
+					<p>제외할 검색어는 앞에 ‘-‘를 입력하세요. (예 : ‘-공항’)</p>
+				</div>
+				<div>
+					<button type="button" id="btn-filter" class="btn btn-fill-bluedark btn-icon-right">제주</button>
+					<button type="button" class="btn btn-outline btn-icon-right">제주</button>
+					<button type="button" class="btn btn-outline btn-icon-right">관광관광관광관광관광관광관광관광관광관광관광관광</button>
+					<button type="button" class="btn btn-outline btn-icon-right">성산일출봉</button>
+				</div>
+			</div>
+			<div class="list-board">
+				<p class="caption">총 980 개 항목</p>
+				<select title="목록 정렬">
+					<option>최신순</option>
+					<option></option>
+				</select>
+				<table class="table-responsive">
+					<thead>
+						<tr class="has-star">
+							<th colspan="2" class="cell-number">번호</th>
+							<th class="cell-subject">데이터명</th>
+							<th>등록일</th>
+							<th>수정일</th>
+							<th>등록자</th>
+							<th>조회</th>
+							<th>즐겨찾기</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="has-split has-star">
+							<td class="cell-star">
+								<button type="button" class="btn btn-icon ico-star">즐겨찾기</button>
+							</td>
+							<td class="cell-number">5,456</td>
+							<td class="cell-subject">
+								<span class="label fill-bluedark">인증</span>
+								<a href="data-view.html" class="hyperlink">제목 제목 제목 제목 제목 제목 제목</a>
+								<span class="label label-new fill-red">N</span>
+								<div>
+									<span class="label outline-skyblue">API</span>
+									<span class="label outline-gray">LINK</span>
+									<span class="label outline-blue">FILE</span>
+									<i class="ico-chart-bar"></i>
+								</div>
+							</td>
+							<td class="cell-linebreak"><label>등록일 : </label>2019.02.22</td>
+							<td><label>수정일 : </label>2020.03.03</td>
+							<td class="cell-linebreak pb16"><label>등록자 : </label>홍길동</td>
+							<td class="pb16"><label>조회 : </label>4,564</td>
+							<td class="pb16"><label>즐겨찾기 : </label>200</td>
+						</tr>
+						<tr class="has-split has-star">
+							<td class="cell-star">
+								<button type="button" class="btn btn-icon ico-star">즐겨찾기</button>
+							</td>
+							<td class="cell-number">5,456</td>
+							<td class="cell-subject">
+								<a href="data-view.html" class="hyperlink">제목 제목 제목 제목 제목 제목</a>
+							</td>
+							<td class="cell-linebreak"><label>등록일 : </label>2019.02.22</td>
+							<td><label>수정일 : </label>2020.03.03</td>
+							<td class="cell-linebreak pb16"><label>등록자 : </label>홍길동</td>
+							<td class="pb16"><label>조회 : </label>4,564</td>
+							<td class="pb16"><label>즐겨찾기 : </label>200</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--//list-board-->
+			<div class="contents-footer">
+				<a href="data-write.html" class="btn btn-fill-bluedark fr">데이터 추가</a>
+			</div>
+			<div class="pagination">
+				<a href="" class="prev">이전</a>
+				<ul>
+					<li class="active"><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li><a href="">6</a></li>
+					<li><a href="">7</a></li>
+					<li><a href="">8</a></li>
+					<li><a href="">9</a></li>
+					<li><a href="">10</a></li>
+				</ul>
+				<a href="" class="next">다음</a>
+			</div><!--//pagination-->
+		</div><!--//contents-->
+	</div><!--//content-wrap-->
+</div><!--//container-->
+
+<div class="global-footer"></div>
+
+<!--검색 필터 : 모바일용-->
+<div class="nav-filter">
+    <div class="filter-header">
+	    <h3>필터</h3>
+	    <a class="nav-filter-close">닫기</a>
+    </div>
+	<ul class="sidebar filter filter-mobile">
+		<li>
+			<h5>데이터 카테고리</h5>
+			<ul>
+				<li>
+					<label class="checkbox-container" for="category-all-mobile">전체
+						<input type="checkbox" id="category-all-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="category-tour-mobile">관광, 여행
+						<input type="checkbox" id="category-tour-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="category-population-mobile">인구, 생활
+						<input type="checkbox" id="category-population-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="category-education-mobile">교육, 행정
+						<input type="checkbox" id="category-education-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="category-health-mobile">보건, 복지
+						<input type="checkbox" id="category-health-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="category-traffic-mobile">교통, 안전
+						<input type="checkbox" id="category-traffic-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="category-economy-mobile">소비, 경제
+						<input type="checkbox" id="category-economy-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="category-environment-mobile">환경, 재난
+						<input type="checkbox" id="category-environment-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="category-farm-mobile">농축수산
+						<input type="checkbox" id="category-farm-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<h5>데이터 유형</h5>
+			<ul>
+				<li>
+					<label class="checkbox-container" for="type-api-mobile">API
+						<input type="checkbox" id="type-api-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="type-file-mobile">파일
+						<input type="checkbox" id="type-file-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+				<li>
+					<label class="checkbox-container" for="type-link-mobile">링크
+						<input type="checkbox" id="type-link-mobile">
+						<span class="checkmark"></span>
+					</label>
+					<span>3,654</span>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<h5>인증 기관</h5>
+			<ul>
+				<li>
+					<label class="checkbox-container" for="certificate-hub-mobile">허브인증
+						<input type="checkbox" id="certificate-hub-mobile">
+						<span class="checkmark"></span>
+					</label>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<script>
+function filterCollapse(){
+    $( "body,.nav-filter,.bg-filter-close" ).removeClass( "active" );
+};
+function btnFilter(){
+    $( "#btn-filter" ).click( function(){
+        $( "body,.nav-filter,.bg-filter-close" ).toggleClass( "active" );
+    });
+    $( "body" ).append( "<div class='bg-filter-close'></div>" );
+    $( ".nav-filter" ).bind( 'webkitTransitionEnd otransitionend oTransitionEnd transitionend', function() {
+        $( ".bg-filter-close, .nav-filter-close" ).click( function(){
+            $( "body, .nav-filter, .bg-filter-close" ).removeClass( "active" );
+        });
+    });
+};
+
+$( document ).ready( function(){
+	filterCollapse();
+	btnFilter();
+});
+
+$( window ).resize( function(){
+    filterCollapse();
+});
+</script>
+</body>
+</html>
