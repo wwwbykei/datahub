@@ -32,6 +32,31 @@
 <script src="js/style.js"></script>
 <script>
 $( document ).ready( function(){
+	
+	// 20210629 추가
+	$( ".carousel-banner" ).slick({
+		dots: true,
+	    customPaging: function(slider, i) { 
+	        return '<span>' + $(slider.$slides[i]).attr('title') + '</span>';
+	    },
+	    arrows: false,
+	    slidesToShow: 1,
+	    slidesToScroll: 1,
+	    fade: true,
+	    autoplay: true,
+	    autoplaySpeed: 2000,
+	    mobileFirst: true,
+	    responsive: [
+			{
+				breakpoint: 1241,
+				settings: {
+	    			arrows: true,
+				}
+			}
+		]
+	});
+	
+	
 	$( ".carousel" ).slick({
 		arrows: true,
 		infinite: false,
@@ -82,28 +107,77 @@ $( document ).ready( function(){
 
 <div id="container">
 	<div class="main-image">
-		<img src="images/img-symbol.png" alt="">
+		
+		
+		<!--20210629 수정-->
 		<div>
-			<img src="images/logo-text.png" alt="">
-			<p>제주의 정보를 제주데이터허브에서 확인하세요.<br>다양한 주제의 키워드로 쉽게 데이터를 검색하고 활용할 수 있습니다.</p>
-			<form>
-			
-				<!--키워드 입력 후 엔터치면 검색되는게 아니고, 입력칸에 키워드가 쌓이게 처리-->
-				<input type="text" placeholder="키워드를 입력하세요." title="키워드 입력">
-				
-				<!--입력한 키워드는 아래 스타일로 추가되도록 처리해주세요-->
-				<div>
-					<button type="button" class="btn btn-outline btn-icon-right">제주</button>
-					<button type="button" class="btn btn-outline btn-icon-right">관광</button>
-					<button type="button" class="btn btn-outline btn-icon-right">성산일출봉</button>
-				</div>
-				
-				<!--검색 버튼을 눌러야 검색 페이지로 넘어감-->
-				<button type="submit" class="btn btn-fill-bluedark">검색</button>
-			</form>
-			<span>간단한 옵션 선택으로 자동 분석 리포트를 확인해보세요.</span>
-			<a data-toggle="modal" data-target="#modal-search" class="btn btn-fill-bluedark">AI 리포트 분석</a>
+			<div class="left">
+				<h3>데이터 검색</h3>
+				<p>제주의 정보를 제주데이터허브에서 확인하세요.<br>다양한 키워드로 쉽게 데이터를 검색하고 활용할 수 있습니다.</p>
+				<form>
+					<input type="text" placeholder="키워드를 입력하세요." title="키워드 입력">
+					<button type="submit" class="btn btn-fill-bluedark">검색</button>
+				</form>
+				<ul>
+					<li>
+						<i class="ico-database"></i>
+						<p>730</p>
+						<h6>데이터</h6>
+					</li>
+					<li>
+						<i class="ico-chart"></i>
+						<p>30</p>
+						<h6>인포그래픽</h6>
+					</li>
+					<li>
+						<i class="ico-people"></i>
+						<p>398</p>
+						<h6>가입자</h6>
+					</li>
+				</ul>
+			</div><!--//left-->
+			<ul class="carousel-banner">
+				<li title="월동작물<br>예측서비스">
+					<a href="">
+						<div class="img-mobile" style="background-image:url(images/temp-banner-mobile1.jpg)"></div>
+						<div class="img-desktop" style="background-image:url(images/temp-banner-desktop1.jpg)"></div>
+						<h6>월동작물<span>예측서비스</span></h6>
+					</a>
+				</li>
+				<li title="무장애여행<br>안내서비스">
+					<a href="">
+						<div class="img-mobile" style="background-image:url(images/temp-banner-mobile2.jpg)"></div>
+						<div class="img-desktop" style="background-image:url(images/temp-banner-desktop2.jpg)"></div>
+						<h6>무장애여행<span>안내서비스</span></h6>
+					</a>
+				</li>
+				<li title="지도기반<br>설문시스템">
+					<a href="">
+						<div class="img-mobile" style="background-image:url(images/temp-banner-mobile3.jpg)"></div>
+						<div class="img-desktop" style="background-image:url(images/temp-banner-desktop3.jpg)"></div>
+						<h6>지도기반<span>설문시스템</span></h6>
+					</a>
+				</li>
+				<li title="공간물류(택배)흐름<br>예측서비스">
+					<a href="">
+						<div class="img-mobile" style="background-image:url(images/temp-banner-mobile4.jpg)"></div>
+						<div class="img-desktop" style="background-image:url(images/temp-banner-desktop4.jpg)"></div>
+						<h6>공간물류(택배)흐름<span>예측서비스</span></h6>
+					</a>
+				</li>
+				<li title="실시간 관광지 혼잡도<br>분석서비스">
+					<a href="">
+						<div class="img-mobile" style="background-image:url(images/temp-banner-mobile5.jpg)"></div>
+						<div class="img-desktop" style="background-image:url(images/temp-banner-desktop5.jpg)"></div>
+						<h6>실시간 관광지 혼잡도<span>분석서비스</span></h6>
+					</a>
+				</li>
+			</ul><!--//carousel-banner-->
 		</div>
+		<!--//20210629 수정-->
+		
+		
+		
 	</div><!--//section-->
 	<div class="section list-category">
 		<ul>
