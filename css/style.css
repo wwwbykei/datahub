@@ -6149,19 +6149,18 @@ a[href="#container"] {
     display: inline-block;
     *display: inline;
     zoom: 1;
+    width: 32%;
     vertical-align: middle;
   }
 }
 @media (min-width:769px) and (max-width:1240px) {
   .page-home .main-image .left {
     max-width: 380px;
-    width: 32%;
   }
 }
 @media (min-width:1241px) {
   .page-home .main-image .left {
-    max-width: 360px;
-    width: 24%;
+    max-width: 480px;
   }
 }
 .page-home .main-image .left h3,
@@ -6313,8 +6312,8 @@ a[href="#container"] {
 }
 @media (min-width:1241px) {
   .page-home .main-image .carousel-banner {
-    width: 700px;
-    margin-left: 6.25%;
+    width: 580px;
+    margin-left: 8%;
     padding-bottom: 48px;
   }
 }
@@ -6349,7 +6348,7 @@ a[href="#container"] {
 }
 @media (min-width:1241px) {
   .page-home .main-image .carousel-banner .slick-slide div.img-desktop {
-    width: 700px;
+    width: 580px;
     height: 320px;
     border-radius: 16px;
   }
