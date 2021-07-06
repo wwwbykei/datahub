@@ -6323,12 +6323,12 @@ a[href="#container"] {
 .page-home .main-image .carousel-banner .slick-slide a {
   display: block;
 }
-.page-home .main-image .carousel-banner .slick-slide div {
+.page-home .main-image .carousel-banner .slick-slide .img {
   background-size: cover;
   background-position: 50% 50% !important;
 }
 @media (max-width:1240px) {
-  .page-home .main-image .carousel-banner .slick-slide div.img-mobile {
+  .page-home .main-image .carousel-banner .slick-slide .img {
     overflow: hidden;
     height: 0;
     padding-top: 55%;
@@ -6337,17 +6337,8 @@ a[href="#container"] {
   }
 }
 @media (min-width:1241px) {
-  .page-home .main-image .carousel-banner .slick-slide div.img-mobile {
-    display: none;
   }
-}
-@media (max-width:1240px) {
-  .page-home .main-image .carousel-banner .slick-slide div.img-desktop {
-    display: none;
-  }
-}
-@media (min-width:1241px) {
-  .page-home .main-image .carousel-banner .slick-slide div.img-desktop {
+  .page-home .main-image .carousel-banner .slick-slide .img {
     width: 580px;
     height: 320px;
     border-radius: 16px;
