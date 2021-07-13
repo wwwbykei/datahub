@@ -43,7 +43,7 @@ $( document ).ready( function(){
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    fade: true,
-	    autoplay: true,
+	    autoplay: false,
 	    autoplaySpeed: 2000,
 	    mobileFirst: true,
 	    responsive: [
@@ -55,6 +55,10 @@ $( document ).ready( function(){
 			}
 		]
 	});
+	
+	
+	// 20210713 추가
+	carouselCategory();
 	
 	
 	$( ".carousel" ).slick({
@@ -96,6 +100,41 @@ $( document ).ready( function(){
 		]
 	});
 });
+
+	
+// 20210713 추가
+function carouselCategory(){
+    var slickOptions = {
+		dots: false,
+	    arrows: true,
+	    autoplay: false,
+	    mobileFirst: true,
+	    slidesToScroll: 1,
+	    infinite: true,
+	    responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 920,
+				settings: {
+					slidesToShow: 5
+				}
+			}
+		]
+	};
+	if( window.innerWidth <= 768 ) {
+		$( ".carousel-category" ).slick('unslick');
+	}else{
+		$( ".carousel-category" ).not('.slick-initialized').slick(slickOptions);
+	}
+}
+$(window).on('load resize', function() {
+	carouselCategory();
+});
 </script>
 </head>
 
@@ -130,41 +169,35 @@ $( document ).ready( function(){
 						<h6>인포그래픽</h6>
 					</li>
 					<li>
-						<i class="ico-people"></i>
-						<p>398</p>
-						<h6>가입자</h6>
+						<i class="ico-report"></i>
+						<p>38</p>
+						<h6>정기리포트</h6>
 					</li>
 				</ul>
 			</div><!--//left-->
 			<ul class="carousel-banner">
-				<li title="월동작물<br>예측서비스">
+				<li title="차트 인포그래픽">
 					<a href="">
 						<div class="img" style="background-image:url(images/temp-banner-1.jpg)"></div>
-						<h6>월동작물<span>예측서비스</span></h6>
+						<h6>차트 인포그래픽</h6>
 					</a>
 				</li>
-				<li title="무장애여행<br>안내서비스">
+				<li title="영상 인포그래픽">
 					<a href="">
 						<div class="img" style="background-image:url(images/temp-banner-2.jpg)"></div>
-						<h6>무장애여행<span>안내서비스</span></h6>
+						<h6>영상 인포그래픽</h6>
 					</a>
 				</li>
-				<li title="지도기반<br>설문시스템">
+				<li title="무장애여행">
 					<a href="">
 						<div class="img" style="background-image:url(images/temp-banner-3.jpg)"></div>
-						<h6>지도기반<span>설문시스템</span></h6>
+						<h6>무장애여행</span></h6>
 					</a>
 				</li>
-				<li title="공간물류(택배)흐름<br>예측서비스">
+				<li title="지도기반설문조사">
 					<a href="">
 						<div class="img" style="background-image:url(images/temp-banner-4.jpg)"></div>
-						<h6>공간물류(택배)흐름<span>예측서비스</span></h6>
-					</a>
-				</li>
-				<li title="실시간 관광지<br>혼잡도분석서비스">
-					<a href="">
-						<div class="img" style="background-image:url(images/temp-banner-5.jpg)"></div>
-						<h6>실시간 관광지<span>혼잡도분석서비스</span></h6>
+						<h6>지도기반설문조사</h6>
 					</a>
 				</li>
 			</ul><!--//carousel-banner-->
@@ -175,25 +208,11 @@ $( document ).ready( function(){
 		
 	</div><!--//section-->
 	<div class="section list-category">
-		<ul>
+		<ul class="carousel-category">
 			<li class="category-tour box-shadow-material">
 				<a href="">
 					<div><i class="ico-tour"></i></div>
-					<h5>관광,여행</h5>
-					<p>데이터 213개</p>
-				</a>
-			</li>
-			<li class="category-education box-shadow-material">
-				<a href="">
-					<div><i class="ico-education"></i></div>
-					<h5>교육,행정</h5>
-					<p>데이터 213개</p>
-				</a>
-			</li>
-			<li class="category-traffic box-shadow-material">
-				<a href="">
-					<div><i class="ico-traffic"></i></div>
-					<h5>교통,안전</h5>
+					<h5>관광, 여행</h5>
 					<p>데이터 213개</p>
 				</a>
 			</li>
@@ -204,24 +223,31 @@ $( document ).ready( function(){
 					<p>데이터 213개</p>
 				</a>
 			</li>
-			<li class="category-farm box-shadow-material">
+			<li class="category-education box-shadow-material">
 				<a href="">
-					<div><i class="ico-farm"></i></div>
-					<h5>농축수산</h5>
+					<div><i class="ico-education"></i></div>
+					<h5>교육, 행정</h5>
 					<p>데이터 213개</p>
 				</a>
 			</li>
-			<!--<li class="category-health box-shadow-material">
+			<li class="category-health box-shadow-material">
 				<a href="">
 					<div><i class="ico-health"></i></div>
-					<h5>보건,복지</h5>
+					<h5>보건, 복지</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
+			<li class="category-traffic box-shadow-material">
+				<a href="">
+					<div><i class="ico-traffic"></i></div>
+					<h5>교통, 안전</h5>
 					<p>데이터 213개</p>
 				</a>
 			</li>
 			<li class="category-economy box-shadow-material">
 				<a href="">
 					<div><i class="ico-economy"></i></div>
-					<h5>소비, 지출</h5>
+					<h5>소비, 결제</h5>
 					<p>데이터 213개</p>
 				</a>
 			</li>
@@ -231,7 +257,14 @@ $( document ).ready( function(){
 					<h5>환경, 재난</h5>
 					<p>데이터 213개</p>
 				</a>
-			</li>-->
+			</li>
+			<li class="category-farm box-shadow-material">
+				<a href="">
+					<div><i class="ico-farm"></i></div>
+					<h5>농축수산</h5>
+					<p>데이터 213개</p>
+				</a>
+			</li>
 		</ul>
 	</div><!--//section-->
 	<div class="section list-data">
