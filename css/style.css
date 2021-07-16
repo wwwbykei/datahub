@@ -6343,7 +6343,7 @@ a[href="#container"] {
 }
 .page-home .main-image .carousel-banner .slick-slide .img {
   box-sizing: border-box;
-  border: #fff solid 8px;
+  border: #fff solid 4px;
   background-size: cover;
   background-position: 50% 50% !important;
 }
