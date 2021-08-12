@@ -29,21 +29,22 @@
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/tooltipster.bundle.min.js"></script>
 <script src="js/style.js"></script>
 <script>
 $( document ).ready( function(){
 	
-	// 20210629 추가
-	$( ".carousel-banner" ).slick({
+	// 20210811 수정 - 시작
+	$( ".carousel-banner .list" ).slick({
 		dots: true,
 	    customPaging: function(slider, i) { 
-	        return '<span>' + $(slider.$slides[i]).attr('title') + '</span>';
+	        return '<button class="tooltip-top" title="' + $(slider.$slides[i]).attr('title') + '"></button>';
 	    },
 	    arrows: false,
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
 	    fade: true,
-	    autoplay: false,
+	    autoplay: true,
 	    autoplaySpeed: 2000,
 	    mobileFirst: true,
 	    responsive: [
@@ -55,6 +56,19 @@ $( document ).ready( function(){
 			}
 		]
 	});
+	$( ".carousel-banner .slick-control .ico-play-blue" ).hide();
+	$( ".carousel-banner .slick-control .ico-pause-blue" ).click( function(){
+        $( ".carousel-banner .list" ).slick('slickPause');
+        $( this ).hide();
+        $( ".carousel-banner .slick-control .ico-play-blue" ).show();
+    });
+	$( ".carousel-banner .slick-control .ico-play-blue" ).click( function(){
+        $( ".carousel-banner .list" ).slick('slickPlay');
+        $( this ).hide();
+        $( ".carousel-banner .slick-control .ico-pause-blue" ).show();
+    });
+	// 20210811 수정 - 끝
+	
 	
 	
 	// 20210713 추가
@@ -176,32 +190,49 @@ $(window).on('load resize', function() {
 					</li>
 				</ul>
 			</div><!--//left-->
-			<ul class="carousel-banner">
-				<li title="차트 인포그래픽">
-					<a href="">
-						<div class="img" style="background-image:url(images/temp-banner-1.jpg)"></div>
-						<h6>차트 인포그래픽</h6>
-					</a>
-				</li>
-				<li title="영상 인포그래픽">
-					<a href="">
-						<div class="img" style="background-image:url(images/temp-banner-2.jpg)"></div>
-						<h6>영상 인포그래픽</h6>
-					</a>
-				</li>
-				<li title="무장애여행">
-					<a href="">
-						<div class="img" style="background-image:url(images/temp-banner-3.jpg)"></div>
-						<h6>무장애여행</span></h6>
-					</a>
-				</li>
-				<li title="지도기반설문조사">
-					<a href="">
-						<div class="img" style="background-image:url(images/temp-banner-4.jpg)"></div>
-						<h6>지도기반설문조사</h6>
-					</a>
-				</li>
-			</ul><!--//carousel-banner-->
+				
+				
+			<!--20210811 수정 시작
+				1. 기존 ul > li 로 되어있던 구조를 div로 변경
+				2. play / pause 버튼 추가
+			-->
+			<div class="carousel-banner">
+				<div class="list">
+					<div title="차트 인포그래픽">
+						<a href="">
+							<div class="img" style="background-image:url(images/temp-banner-1.jpg)"></div>
+							<h6>차트 인포그래픽</h6>
+						</a>
+					</div>
+					<div title="영상 인포그래픽">
+						<a href="">
+							<div class="img" style="background-image:url(images/temp-banner-2.jpg)"></div>
+							<h6>영상 인포그래픽</h6>
+						</a>
+					</div>
+					<div title="무장애여행">
+						<a href="">
+							<div class="img" style="background-image:url(images/temp-banner-3.jpg)"></div>
+							<h6>무장애여행</span></h6>
+						</a>
+					</div>
+					<div title="지도기반설문조사">
+						<a href="">
+							<div class="img" style="background-image:url(images/temp-banner-4.jpg)"></div>
+							<h6>지도기반설문조사</h6>
+						</a>
+					</div>
+				</div>
+				<div class="slick-control">
+					<button type="button" class="ico-play-blue">Play</button>
+					<button type="button" class="ico-pause-blue">Pause</button>
+				</div>
+			</div><!--//carousel-banner-->
+			<!--//20210811 수정 끝-->
+			
+			
+			
+			
 		</div>
 		<!--//20210629 수정-->
 		

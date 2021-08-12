@@ -1141,6 +1141,11 @@ img {
   background-position: 0 0;
   background-repeat: no-repeat;
 }
+.ico-pause-blue {
+  background-image: url("../images/ico-pause-blue.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
 .ico-person {
   background-image: url("../images/ico-person-lightblue.png");
   background-position: 0 0;
@@ -1153,6 +1158,11 @@ img {
 }
 .ico-play {
   background-image: url("../images/ico-play-outline-white.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.ico-play-blue {
+  background-image: url("../images/ico-play-blue.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -4859,8 +4869,9 @@ a {
  */
 /* .tooltipster-box */
 .tooltipster-sidetip .tooltipster-box {
-  background: #F0F0F0;
-  border-radius: 10px;
+  background: #333;
+  border: 0px solid #000;
+  border-radius: 4px;
 }
 .tooltipster-sidetip.tooltipster-bottom .tooltipster-box {
   margin-top: 8px;
@@ -4876,9 +4887,10 @@ a {
 }
 /* .tooltipster-content */
 .tooltipster-sidetip .tooltipster-content {
-  color: #333;
+  font-size: 12px;
+  color: #fff;
   line-height: 1.5;
-  padding: 12px 15px;
+  padding: 6px 12px;
 }
 /* .tooltipster-arrow : will keep only the zone of .tooltipster-arrow-uncropped that
 corresponds to the arrow we want to display */
@@ -4911,10 +4923,10 @@ corresponds to the arrow we want to display */
   width: 10px;
 }
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow {
-  bottom: 0;
-  height: 10px;
-  margin-left: -10px;
-  width: 20px;
+  bottom: 4px;
+  height: 4px;
+  margin-left: -4px;
+  width: 8px;
 }
 /* common rules between .tooltipster-arrow-background and .tooltipster-arrow-border */
 .tooltipster-sidetip .tooltipster-arrow-background,
@@ -4925,7 +4937,7 @@ corresponds to the arrow we want to display */
 }
 /* .tooltipster-arrow-background */
 .tooltipster-sidetip .tooltipster-arrow-background {
-  border: 10px solid transparent;
+  border: 4px solid transparent;
 }
 .tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background {
   border-bottom-color: #f0f0f0;
@@ -4943,13 +4955,13 @@ corresponds to the arrow we want to display */
   top: 0;
 }
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
-  border-top-color: #f0f0f0;
+  border-top-color: #333;
   left: 0;
-  top: -3px;
+  top: -11px;
 }
 /* .tooltipster-arrow-border */
 .tooltipster-sidetip .tooltipster-arrow-border {
-  border: 10px solid transparent;
+  border: 4px solid transparent;
   left: 0;
   top: 0;
 }
@@ -4963,7 +4975,7 @@ corresponds to the arrow we want to display */
   border-right-color: #f0f0f0;
 }
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border {
-  border-top-color: #f0f0f0;
+  border-top-color: #333;
 }
 /* tooltipster-arrow-uncropped */
 .tooltipster-sidetip .tooltipster-arrow-uncropped {
@@ -6383,76 +6395,6 @@ a[href="#container"] {
 .page-home .main-image .carousel-banner .slick-slide h6 span {
   margin-left: 4px;
 }
-.page-home .main-image .carousel-banner .slick-dots {
-  margin-top: 4px;
-}
-@media (min-width:1241px) {
-  .page-home .main-image .carousel-banner .slick-dots {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .page-home .main-image .carousel-banner .slick-dots > * {
-    display: table-cell;
-  }
-}
-@media (max-width:1240px) {
-  .page-home .main-image .carousel-banner .slick-dots > li {
-    overflow: hidden;
-  }
-}
-@media (min-width:1241px) {
-  .page-home .main-image .carousel-banner .slick-dots > li {
-    padding-right: 12px;
-    padding-left: 12px;
-  }
-}
-@media (min-width:1241px) {
-  .page-home .main-image .carousel-banner .slick-dots > li:not(:first-child) {
-    border-left: 1px solid #cddaf4;
-  }
-}
-.page-home .main-image .carousel-banner .slick-dots > li span {
-  display: block;
-}
-@media (max-width:1240px) {
-  .page-home .main-image .carousel-banner .slick-dots > li span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #cddaf4;
-    color: transparent;
-    text-shadow: none;
-    text-indent: -9999px;
-  }
-}
-@media (min-width:1241px) {
-  .page-home .main-image .carousel-banner .slick-dots > li span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-    white-space: normal;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    font-size: 16px;
-    opacity: 0.65;
-    filter: alpha(opacity=65);
-  }
-}
-@media (max-width:1240px) {
-  .page-home .main-image .carousel-banner .slick-dots .slick-active span {
-    background-color: #224da0;
-  }
-}
-@media (min-width:1241px) {
-  .page-home .main-image .carousel-banner .slick-dots .slick-active span {
-    position: relative;
-    font-weight: 700;
-    opacity: 1;
-    filter: alpha(opacity=100);
-  }
-}
 .page-home .main-image .carousel-banner .slick-prev,
 .page-home .main-image .carousel-banner .slick-next {
   position: absolute;
@@ -6492,6 +6434,65 @@ a[href="#container"] {
   background-image: url("../images/ico-arrow-right-blue.png");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+.page-home .main-image .carousel-banner .slick-dots {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  width: auto;
+  margin-top: 8px;
+  padding: 9px 12px 10px;
+  border-radius: 20px;
+  background-color: rgba(176, 199, 220, 0.2);
+  vertical-align: middle;
+}
+.page-home .main-image .carousel-banner .slick-dots > li {
+  width: auto;
+  height: auto;
+  margin-right: 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+@media (max-width:1240px) {
+  .page-home .main-image .carousel-banner .slick-dots > li {
+    overflow: hidden;
+  }
+}
+.page-home .main-image .carousel-banner .slick-dots > li button {
+  width: 8px;
+  height: 8px;
+  background-color: #224da0;
+  opacity: 0.15;
+  filter: alpha(opacity=15);
+}
+.page-home .main-image .carousel-banner .slick-dots .slick-active button {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.page-home .main-image .carousel-banner .slick-control {
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(176, 199, 220, 0.2);
+  border-radius: 50%;
+}
+.page-home .main-image .carousel-banner .slick-control button {
+  width: 100%;
+  height: 100%;
+  background-size: 20px;
+  background-position: 50% 50% !important;
+  color: transparent;
+  text-shadow: none;
+  text-indent: -9999px;
+  cursor: pointer;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.page-home .main-image .carousel-banner .slick-control button:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 @media (max-width:768px) {
   .page-home .list-category {
